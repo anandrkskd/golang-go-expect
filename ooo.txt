@@ -1,0 +1,2183 @@
+o.txt
+. ./scripts/configure-installer-tests-cluster.sh
+Login successful.
+
+You have access to 65 projects, the list has been suppressed. You can list all projects with 'oc projects'
+
+Using project "default".
+kube:admin
+Call  separately if you want to reset the kubeconfig
+subscription.operators.coreos.com/my-redis-operator created
+clusterrole.rbac.authorization.k8s.io/edit added: "developer"
+Now using project "openjdk-11-rhel8" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+secret/pull-secret created
+clusterrole.rbac.authorization.k8s.io/edit added: "developer"
+Now using project "nodejs-12-rhel7" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+secret/pull-secret created
+clusterrole.rbac.authorization.k8s.io/edit added: "developer"
+Now using project "nodejs-12" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+secret/pull-secret created
+clusterrole.rbac.authorization.k8s.io/edit added: "developer"
+Now using project "openjdk-11" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+secret/pull-secret created
+clusterrole.rbac.authorization.k8s.io/edit added: "developer"
+Now using project "nodejs-14" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+secret/pull-secret created
+clusterrole.rbac.authorization.k8s.io/edit added: "developer"
+imagestream.image.openshift.io/wildfly created
+Creating cluster secret for htpasswd
+secret/htpasswd-secret created
+configuring cluster to use configured auth
+oauth.config.openshift.io/cluster configured
+ensuring login api stability
+Setting up first project
+Now using project "myproject" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+Client Version: 4.10.0-fc.0
+Kubernetes Version: v1.23.0+20a057a
+You have access to the following projects and can switch between them with ' project <projectname>':
+
+    default
+  * myproject
+    nodejs-12
+    nodejs-12-rhel7
+    nodejs-14
+    openjdk-11
+    openjdk-11-rhel8
+
+Using project "myproject" on server "https://api.etthbwfo.etthbwfo.interop.css-qe.com:6443".
+go build -mod=vendor -ldflags="-X github.com/openshift/odo/pkg/version.GITCOMMIT=88e89104e" cmd/odo/odo.go
+This is no longer used.
+Ginkgo can be executed directly from this repository using command 'GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo'
+Login successful.
+
+You have access to the following projects and can switch between them with 'oc project <projectname>':
+
+  * default
+    myproject
+    nodejs-12
+    nodejs-12-rhel7
+    nodejs-14
+    openjdk-11
+    openjdk-11-rhel8
+
+Using project "default".
+developer
+GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo  -randomizeAllSpecs -slowSpecThreshold=120 -timeout 14400s -nodes=4 tests/integration/
+Running Suite: Integration Suite
+================================
+Random Seed: 1642029690 - Will randomize all specs
+Will run 46 specs
+
+Running in parallel across 4 nodes
+
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ Failure in Spec Setup (BeforeEach) [107.906 seconds]
+odo link and unlink command tests
+/home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:14
+  when two components are deployed
+  /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:45
+    when a link is created between the two components [BeforeEach]
+    /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:87
+      when the link is pushed
+      /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:101
+        when unlinking the two components
+        /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:128
+          should find the link in odo describe
+          /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:132
+
+          No future change is possible.  Bailing out early after 35.990s.
+          Running odo with args [odo push --context /tmp/2875621606]
+          Expected
+              <int>: 1
+          to match exit code:
+              <int>: 0
+
+          /home/cloud-user/odo/tests/helper/helper_cmd_wrapper.go:100
+------------------------------
+â€¢ Failure in Spec Setup (BeforeEach) [125.063 seconds]
+odo link and unlink command tests
+/home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:14
+  when two components are deployed
+  /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:45
+    when a link is created between the two components [BeforeEach]
+    /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:87
+      when the link is pushed
+      /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:101
+        should find the linked environment variable
+        /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:113
+
+        No future change is possible.  Bailing out early after 36.094s.
+        Running odo with args [odo push --context /tmp/1726534057]
+        Expected
+            <int>: 1
+        to match exit code:
+            <int>: 0
+
+        /home/cloud-user/odo/tests/helper/helper_cmd_wrapper.go:100
+------------------------------
+â€¢ [SLOW TEST:142.083 seconds]
+odo link and unlink command tests
+/home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:14
+  when two components are deployed
+  /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:45
+    when a link is created between the two components
+    /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:87
+      should find the link in odo describe
+      /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:93
+------------------------------
+â€¢ [SLOW TEST:159.227 seconds]
+odo link and unlink command tests
+/home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:14
+  when two components are deployed
+  /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:45
+    when a link is created between the two components
+    /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:87
+      when the link is pushed
+      /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:101
+        should find the link and environment variables in odo describe
+        /home/cloud-user/odo/tests/integration/cmd_link_unlink_test.go:110
+------------------------------
+â€¢
+------------------------------
+Created dir: /tmp/346749230
+Setting KUBECONFIG=/tmp/346749230/config
+Creating a new project: cmd-link-unlink-test132gnq
+Running odo with args [odo project create cmd-link-unlink-test132gnq -w -v4]
+[odo] I0112 18:21:49.826516   49384 preference.go:210] The path for preference file is /home/cloud-user/.odo/preference.yaml
+[odo] I0112 18:21:49.826678   49384 runnable.go:52] Skipping telemetry question because there is no terminal (tty)
+[odo] I0112 18:21:49.826692   49384 segment.go:246] Checking telemetry enable status
+[odo] I0112 18:21:49.826700   49384 segment.go:259] Sending telemetry disabled by ODO_DISABLE_TELEMETRY=true
+[odo] I0112 18:21:49.826765   49384 util.go:482] path /home/cloud-user/odo/tests/integration/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:49.826775   49384 util.go:482] path /home/cloud-user/odo/tests/integration/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:49.831309   49384 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:49.831433   49384 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:49.932780   49384 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:49.933845   49384 kclient.go:231] Checking if "projects" resource is supported
+[odo]  â€¢  Waiting for project to come up  ...
+[odo] I0112 18:21:50.549984   49384 projects.go:192] Status of creation of project cmd-link-unlink-test132gnq is Active
+[odo] I0112 18:21:50.550010   49384 projects.go:197] Project cmd-link-unlink-test132gnq now exists
+[odo] 
+ âœ“  Waiting for project to come up [643ms]
+[odo]  âœ“  Project "cmd-link-unlink-test132gnq" is ready for use
+[odo] I0112 18:21:50.576698   49384 namespace.go:186] Status of creation of service account &ServiceAccount{ObjectMeta:{default  cmd-link-unlink-test132gnq  a427ffcb-72f7-48fc-9aac-11a0b99eddb6 34939 0 2022-01-12 18:21:50 -0500 EST <nil> <nil> map[] map[openshift.io/create-dockercfg-secrets.pending-token:default-token-5qpjh] [] []  []},Secrets:[]ObjectReference{ObjectReference{Kind:,Namespace:,Name:default-token-d992m,UID:,APIVersion:,ResourceVersion:,FieldPath:,},},ImagePullSecrets:[]LocalObjectReference{},AutomountServiceAccountToken:nil,} is ready
+[odo] I0112 18:21:50.589541   49384 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo]  âœ“  New project created and now using project: cmd-link-unlink-test132gnq
+Running oc with args [oc create configmap config-map-for-cleanup --from-literal type=testing --from-literal team=odo -n cmd-link-unlink-test132gnq]
+[oc] configmap/config-map-for-cleanup created
+Current working dir: /home/cloud-user/odo/tests/integration
+Running odo with args [odo registry update DefaultDevfileRegistry https://registry.stage.devfile.io -f]
+[odo] Successfully updated registry
+[odo] I0112 18:21:51.089340   49533 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:21:51.089454   49533 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:51.089496   49533 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:21:51.089548   49533 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:51.090014   49533 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo catalog list services]
+[odo] I0112 18:21:52.284729   49633 util.go:482] path /home/cloud-user/odo/tests/integration/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.284815   49633 util.go:482] path /home/cloud-user/odo/tests/integration/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.284848   49633 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:52.408530   49633 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:52.605325   49633 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:21:52.631390   49633 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:21:52.747741   49633 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo] Services available through Operators
+[odo] NAME                      CRDs
+[odo] redis-operator.v0.8.0     RedisCluster, Redis
+Created dir: /tmp/822619973
+Running odo with args [odo create frontend-mtj --context /tmp/822619973 --project cmd-link-unlink-test132gnq --devfile /home/cloud-user/odo/tests/examples/source/devfiles/nodejs/devfile-registry.yaml]
+[odo] I0112 18:21:52.938907   49692 util.go:482] path /tmp/822619973/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939020   49692 util.go:482] path /tmp/822619973/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939046   49692 util.go:482] path /tmp/822619973/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939059   49692 util.go:482] path /tmp/822619973/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939067   49692 util.go:482] path /tmp/822619973/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939076   49692 util.go:482] path /tmp/822619973/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939083   49692 util.go:482] path /tmp/822619973/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939091   49692 util.go:482] path /tmp/822619973/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939100   49692 util.go:482] path /tmp/822619973/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:52.939108   49692 util.go:482] path /tmp/822619973/.devfile.yaml doesn't exist, skipping it
+[odo] Devfile Object Creation
+[odo]  â€¢  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/nodejs/devfile-registry.yaml  ...
+[odo] I0112 18:21:52.938943   49692 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] 
+ âœ“  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/nodejs/devfile-registry.yaml [225026ns]
+[odo] I0112 18:21:52.939367   49692 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:52.939498   49692 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:52.939524   49692 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:52.940265   49692 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:52.940363   49692 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:52.940381   49692 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] Validation
+[odo]  â€¢  Validating if devfile name is correct  ...
+[odo] 
+ âœ“  Validating if devfile name is correct [32719ns]
+[odo]  â€¢  Validating the devfile for odo  ...
+[odo] I0112 18:21:52.963349   49692 schema.go:46] validated devfile schema
+[odo] I0112 18:21:52.965964   49692 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:52.965981   49692 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:52.968276   49692 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:52.968429   49692 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:52.968443   49692 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] 
+ âœ“  Validating the devfile for odo [28ms]
+[odo] I0112 18:21:52.993758   49692 schema.go:46] validated devfile schema
+[odo] I0112 18:21:52.993999   49692 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:52.994035   49692 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:52.994041   49692 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:52.994500   49692 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:52.994561   49692 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:52.994568   49692 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:53.001015   49692 schema.go:46] validated devfile schema
+[odo]  â€¢  Updating the devfile with component name "frontend-mtj"  ...
+[odo] 
+ âœ“  Updating the devfile with component name "frontend-mtj" [2ms]
+[odo] 
+[odo] Please use `odo push` command to create the component with source deployed
+[odo] I0112 18:21:53.004149   49692 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:21:53.004757   49692 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo url create --port 8080 --context /tmp/822619973]
+[odo] I0112 18:21:53.228141   49721 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:53.233924   49721 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:53.305987   49721 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:53.306021   49721 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:53.307073   49721 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:53.307190   49721 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:53.307222   49721 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:53.314450   49721 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:53.316183   49721 schema.go:46] validated devfile schema
+[odo] I0112 18:21:53.319103   49721 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:53.319162   49721 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:53.428420   49721 kclient.go:231] Checking if "routes" resource is supported
+[odo]  âœ“  URL frontend-mtj-8080 created for component: frontend-mtj
+[odo] 
+[odo] To apply the URL configuration changes, please use `odo push`
+[odo] I0112 18:21:53.451273   49721 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:21:53.451549   49721 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo push --context /tmp/822619973]
+[odo] I0112 18:21:53.590123   49760 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:53.590191   49760 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:53.590651   49760 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:53.590757   49760 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:53.590767   49760 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:53.592652   49760 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:53.592753   49760 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:53.601612   49760 schema.go:46] validated devfile schema
+[odo] I0112 18:21:53.604614   49760 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:53.604647   49760 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:53.679307   49760 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:53.696648   49760 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:21:53.742684   49760 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:21:53.767142   49760 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:53.767161   49760 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:21:53.768005   49760 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:53.768124   49760 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:53.768135   49760 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:53.776700   49760 schema.go:46] validated devfile schema
+[odo] I0112 18:21:53.776957   49760 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:53.846310   49760 command.go:172] Build command: install
+[odo] I0112 18:21:53.846368   49760 command.go:179] Run command: run
+[odo] 
+[odo] Validation
+[odo]  â€¢  Validating the devfile  ...
+[odo] 
+ âœ“  Validating the devfile [113544ns]
+[odo] 
+[odo] Creating Services for component frontend-mtj
+[odo] I0112 18:21:53.851736   49760 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:21:53.892519   49760 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:21:53.950447   49760 service.go:87] Getting list of services
+[odo] I0112 18:21:53.950499   49760 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:21:54.042685   49760 service.go:105] Getting services started from operator: redis-operator.v0.8.0
+[odo] I0112 18:21:54.042733   49760 service.go:209] Getting instances of: redisclusters.redis.redis.opstreelabs.in
+[odo] I0112 18:21:54.066817   49760 service.go:209] Getting instances of: redis.redis.redis.opstreelabs.in
+[odo]  âœ“  Services are in sync with the cluster, no changes are required
+[odo] 
+[odo] Creating Kubernetes resources for component frontend-mtj
+[odo] I0112 18:21:54.100364   49760 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:21:54.137712   49760 utils.go:224] Updating container runtime entrypoint with supervisord
+[odo] I0112 18:21:54.137814   49760 utils.go:108] Updating container runtime with supervisord volume mounts
+[odo] I0112 18:21:54.137823   49760 utils.go:118] Updating container runtime env with run command
+[odo] I0112 18:21:54.137831   49760 utils.go:135] Updating container runtime env with run command's workdir
+[odo] I0112 18:21:54.137838   49760 utils.go:171] Updating container runtime env with debug command
+[odo] I0112 18:21:54.137845   49760 utils.go:188] Updating container runtime env with debug command's workdir
+[odo] I0112 18:21:54.137852   49760 utils.go:197] Updating container runtime env with debug command's debugPort
+[odo] I0112 18:21:54.173745   49760 adapter.go:571] Creating deployment frontend-mtj-app
+[odo] I0112 18:21:54.173771   49760 adapter.go:572] The component name is frontend-mtj
+[odo] I0112 18:21:54.189354   49760 kclient.go:280] Kubernetes version is "v1.23.0+20a057a"
+[odo] I0112 18:21:54.189385   49760 kclient.go:292] Cluster has support for SSA: true
+[odo] I0112 18:21:54.251566   49760 adapter.go:599] Successfully created component frontend-mtj
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:21:54.317385   49760 adapter.go:607] Successfully created Service for component frontend-mtj
+[odo] I0112 18:21:54.317423   49760 deployments.go:152] Waiting for frontend-mtj-app deployment rollout
+[odo] I0112 18:21:54.349710   49760 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:21:53Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"frontend-mtj-app-5b577c5f4\""}
+[odo] I0112 18:21:54.349765   49760 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:21:54.415288   49760 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:21:53Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"frontend-mtj-app-5b577c5f4\""}
+[odo] I0112 18:21:54.415336   49760 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:21:53Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:21:54.415347   49760 deployments.go:192] Waiting for deployment "frontend-mtj-app" rollout to finish: 0 out of 1 new replicas have been updated...
+[odo] I0112 18:21:54.415362   49760 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:21:54.917963   49760 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:21:53Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:21:54.918002   49760 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:21:54Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"ReplicaSetUpdated","message":"ReplicaSet \"frontend-mtj-app-5b577c5f4\" is progressing."}
+[odo] I0112 18:21:54.918014   49760 deployments.go:196] Waiting for deployment "frontend-mtj-app" rollout to finish: 0 of 1 updated replicas are available...
+[odo] I0112 18:21:54.918024   49760 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] 
+ âœ“  Waiting for component to start [46s]
+[odo] I0112 18:22:39.982328   49760 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:22:39Z","lastTransitionTime":"2022-01-12T23:22:39Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:22:39.982371   49760 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:39Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"frontend-mtj-app-5b577c5f4\" has successfully progressed."}
+[odo] I0112 18:22:39.982426   49760 deployments.go:199] Deployment "frontend-mtj-app" successfully rolled out
+[odo] I0112 18:22:39.982447   49760 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:39.982523   49760 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:22:39.982678   49760 pods.go:40] Waiting for component=frontend-mtj pod
+[odo] I0112 18:22:40.020249   49760 pods.go:70] Status of frontend-mtj-app-5b577c5f4-jzwcs pod is Running
+[odo] I0112 18:22:40.021143   49760 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:19Z"}
+[odo] I0112 18:22:40.021179   49760 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:40Z"}
+[odo] I0112 18:22:40.021188   49760 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:40Z"}
+[odo] I0112 18:22:40.021195   49760 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:21:53Z"}
+[odo] I0112 18:22:40.021445   49760 pods.go:79] Container Status: {"name":"runtime","state":{"running":{"startedAt":"2022-01-12T23:22:39Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"registry.access.redhat.com/ubi8/nodejs-14:latest","imageID":"registry.access.redhat.com/ubi8/nodejs-14@sha256:4d83428d351d6e5a5c6d5704015a9f89379a758de8496a720aff96f33091c069","containerID":"cri-o://92aa72d75778f73ffa83439d7fe6cd929ebc85679a856d2fac795b44d12a11cd","started":true}
+[odo] I0112 18:22:40.021464   49760 pods.go:83] Pod frontend-mtj-app-5b577c5f4-jzwcs is Running
+[odo] I0112 18:22:40.042763   49760 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:22:40.061031   49760 kclient.go:231] Checking if "deployments" resource is supported
+[odo] I0112 18:22:40.067393   49760 deployments.go:152] Waiting for frontend-mtj-app deployment rollout
+[odo]  âœ“  Links are in sync with the cluster, no changes are required
+[odo]  â€¢  Waiting for component to start  ...
+[odo] 
+ âœ“  Waiting for component to start [19ms]
+[odo] I0112 18:22:40.086501   49760 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:22:39Z","lastTransitionTime":"2022-01-12T23:22:39Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:22:40.086551   49760 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:39Z","lastTransitionTime":"2022-01-12T23:21:53Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"frontend-mtj-app-5b577c5f4\" has successfully progressed."}
+[odo] I0112 18:22:40.086579   49760 deployments.go:199] Deployment "frontend-mtj-app" successfully rolled out
+[odo] I0112 18:22:40.086587   49760 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:40.086673   49760 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:22:40.086837   49760 pods.go:40] Waiting for component=frontend-mtj pod
+[odo] I0112 18:22:40.098891   49760 pods.go:70] Status of frontend-mtj-app-5b577c5f4-jzwcs pod is Running
+[odo] I0112 18:22:40.098945   49760 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:19Z"}
+[odo] I0112 18:22:40.098955   49760 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:40Z"}
+[odo] I0112 18:22:40.098961   49760 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:40Z"}
+[odo] I0112 18:22:40.098968   49760 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:21:53Z"}
+[odo] I0112 18:22:40.099011   49760 pods.go:79] Container Status: {"name":"runtime","state":{"running":{"startedAt":"2022-01-12T23:22:39Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"registry.access.redhat.com/ubi8/nodejs-14:latest","imageID":"registry.access.redhat.com/ubi8/nodejs-14@sha256:4d83428d351d6e5a5c6d5704015a9f89379a758de8496a720aff96f33091c069","containerID":"cri-o://92aa72d75778f73ffa83439d7fe6cd929ebc85679a856d2fac795b44d12a11cd","started":true}
+[odo] I0112 18:22:40.099020   49760 pods.go:83] Pod frontend-mtj-app-5b577c5f4-jzwcs is Running
+[odo] I0112 18:22:40.099076   49760 kclient.go:231] Checking if "routes" resource is supported
+[odo] 
+[odo] Applying URL changes
+[odo] I0112 18:22:40.123492   49760 kubernetes.go:45] Listing ingresses with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-mtj
+[odo] I0112 18:22:40.123505   49760 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:40.148785   49760 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:40.203115   49760 routes.go:65] Listing routes with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-mtj
+[odo]  âœ“  URL http-3000: http://http-3000-app-cmd-link-unlink-test132gnq.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo]  âœ“  URL frontend-mtj-8080: http://frontend-mtj-8080-app-cmd-link-unlink-test132gnq.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo] 
+[odo] Syncing to component frontend-mtj
+[odo]  â€¢  Checking files for pushing  ...
+[odo] I0112 18:22:40.646241   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973, destBase: ., destFile: .
+[odo] I0112 18:22:40.646266   49760 file_indexer.go:421] Corrected destinations: base: . file: .
+[odo] I0112 18:22:40.646373   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/.gitignore, destBase: ., destFile: .gitignore
+[odo] I0112 18:22:40.646387   49760 file_indexer.go:421] Corrected destinations: base: . file: .gitignore
+[odo] I0112 18:22:40.646414   49760 file_indexer.go:466] file added: /tmp/822619973/.gitignore
+[odo] I0112 18:22:40.646424   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/.odo, destBase: ., destFile: .odo
+[odo] I0112 18:22:40.646427   49760 file_indexer.go:421] Corrected destinations: base: . file: .odo
+[odo] I0112 18:22:40.646454   49760 file_indexer.go:466] file added: /tmp/822619973/.odo
+[odo] I0112 18:22:40.646460   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/Dockerfile, destBase: ., destFile: Dockerfile
+[odo] I0112 18:22:40.646464   49760 file_indexer.go:421] Corrected destinations: base: . file: Dockerfile
+[odo] I0112 18:22:40.646494   49760 file_indexer.go:466] file added: /tmp/822619973/Dockerfile
+[odo] I0112 18:22:40.646506   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/devfile.yaml, destBase: ., destFile: devfile.yaml
+[odo] I0112 18:22:40.646511   49760 file_indexer.go:421] Corrected destinations: base: . file: devfile.yaml
+[odo] I0112 18:22:40.646545   49760 file_indexer.go:466] file added: /tmp/822619973/devfile.yaml
+[odo] I0112 18:22:40.646561   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/package.json, destBase: ., destFile: package.json
+[odo] I0112 18:22:40.646565   49760 file_indexer.go:421] Corrected destinations: base: . file: package.json
+[odo] I0112 18:22:40.646592   49760 file_indexer.go:466] file added: /tmp/822619973/package.json
+[odo] I0112 18:22:40.646603   49760 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/server.js, destBase: ., destFile: server.js
+[odo] I0112 18:22:40.646608   49760 file_indexer.go:421] Corrected destinations: base: . file: server.js
+[odo] 
+ âœ“  Checking files for pushing [586258ns]
+[odo] I0112 18:22:40.646630   49760 file_indexer.go:466] file added: /tmp/822619973/server.js
+[odo]  â€¢  Syncing files to the component  ...
+[odo] I0112 18:22:40.646727   49760 adapter.go:144] List of files to be deleted: +[]
+[odo] I0112 18:22:40.646745   49760 adapter.go:146] List of files changed: +[/tmp/822619973/server.js /tmp/822619973/.gitignore /tmp/822619973/Dockerfile /tmp/822619973/devfile.yaml /tmp/822619973/package.json]
+[odo] I0112 18:22:40.646760   49760 adapter.go:180] Push: componentName: frontend-mtj, path: /tmp/822619973, files: [/tmp/822619973/server.js /tmp/822619973/.gitignore /tmp/822619973/Dockerfile /tmp/822619973/devfile.yaml /tmp/822619973/package.json], delFiles: [*], isForcePush: true
+[odo] I0112 18:22:40.646796   49760 adapter.go:198] Creating /project on the remote container if it doesn't already exist
+[odo] I0112 18:22:40.646809   49760 exec.go:27] Executing command [mkdir -p /project] for pod: frontend-mtj-app-5b577c5f4-jzwcs in container: runtime
+[odo] I0112 18:22:40.926239   49760 adapter.go:304] remote files marked for deletion are [/project/*]
+[odo] I0112 18:22:40.926288   49760 exec.go:27] Executing command [rm -rf /project/*] for pod: frontend-mtj-app-5b577c5f4-jzwcs in container: runtime
+[odo] I0112 18:22:41.231089   49760 adapter.go:225] Copying files /tmp/822619973/server.js /tmp/822619973/.gitignore /tmp/822619973/Dockerfile /tmp/822619973/devfile.yaml /tmp/822619973/package.json to pod
+[odo] I0112 18:22:41.231131   49760 sync.go:35] CopyFile arguments: localPath /tmp/822619973, dest /project/822619973, targetPath /project, copyFiles [/tmp/822619973/server.js /tmp/822619973/.gitignore /tmp/822619973/Dockerfile /tmp/822619973/devfile.yaml /tmp/822619973/package.json], globalExps [/tmp/822619973/.git /tmp/822619973/tmp/822619973/.odo/env /tmp/822619973/.odo/odo-file-index.json]
+[odo] I0112 18:22:41.231154   49760 pods.go:188] Executing command tar xf - -C /project
+[odo] I0112 18:22:41.231498   49760 sync.go:76] makeTar arguments: srcPath: /tmp/822619973, destPath: /project/822619973, files: [/tmp/822619973/server.js /tmp/822619973/.gitignore /tmp/822619973/Dockerfile /tmp/822619973/devfile.yaml /tmp/822619973/package.json]
+[odo] I0112 18:22:41.231604   49760 sync.go:106] Got abs path: /tmp/822619973/server.js
+[odo] I0112 18:22:41.231616   49760 sync.go:107] Making /tmp/822619973 relative to /tmp/822619973/server.js
+[odo] I0112 18:22:41.231624   49760 sync.go:123] makeTar srcFile: 822619973/server.js
+[odo] I0112 18:22:41.231630   49760 sync.go:124] makeTar destFile: server.js
+[odo] I0112 18:22:41.231637   49760 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/server.js, destBase: /project, destFile: server.js
+[odo] I0112 18:22:41.231642   49760 sync.go:150] Corrected destinations: base: /project file: server.js
+[odo] I0112 18:22:41.364295   49760 sync.go:106] Got abs path: /tmp/822619973/.gitignore
+[odo] I0112 18:22:41.364324   49760 sync.go:107] Making /tmp/822619973 relative to /tmp/822619973/.gitignore
+[odo] I0112 18:22:41.364336   49760 sync.go:123] makeTar srcFile: 822619973/.gitignore
+[odo] I0112 18:22:41.364346   49760 sync.go:124] makeTar destFile: .gitignore
+[odo] I0112 18:22:41.364356   49760 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/.gitignore, destBase: /project, destFile: .gitignore
+[odo] I0112 18:22:41.364361   49760 sync.go:150] Corrected destinations: base: /project file: .gitignore
+[odo] I0112 18:22:41.364585   49760 sync.go:106] Got abs path: /tmp/822619973/Dockerfile
+[odo] I0112 18:22:41.364604   49760 sync.go:107] Making /tmp/822619973 relative to /tmp/822619973/Dockerfile
+[odo] I0112 18:22:41.364612   49760 sync.go:123] makeTar srcFile: 822619973/Dockerfile
+[odo] I0112 18:22:41.364617   49760 sync.go:124] makeTar destFile: Dockerfile
+[odo] I0112 18:22:41.364624   49760 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/Dockerfile, destBase: /project, destFile: Dockerfile
+[odo] I0112 18:22:41.364628   49760 sync.go:150] Corrected destinations: base: /project file: Dockerfile
+[odo] I0112 18:22:41.364814   49760 sync.go:106] Got abs path: /tmp/822619973/devfile.yaml
+[odo] I0112 18:22:41.364970   49760 sync.go:107] Making /tmp/822619973 relative to /tmp/822619973/devfile.yaml
+[odo] I0112 18:22:41.364996   49760 sync.go:123] makeTar srcFile: 822619973/devfile.yaml
+[odo] I0112 18:22:41.365002   49760 sync.go:124] makeTar destFile: devfile.yaml
+[odo] I0112 18:22:41.365008   49760 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/devfile.yaml, destBase: /project, destFile: devfile.yaml
+[odo] I0112 18:22:41.365013   49760 sync.go:150] Corrected destinations: base: /project file: devfile.yaml
+[odo] I0112 18:22:41.365596   49760 sync.go:106] Got abs path: /tmp/822619973/package.json
+[odo] I0112 18:22:41.365636   49760 sync.go:107] Making /tmp/822619973 relative to /tmp/822619973/package.json
+[odo] I0112 18:22:41.365649   49760 sync.go:123] makeTar srcFile: 822619973/package.json
+[odo] I0112 18:22:41.365655   49760 sync.go:124] makeTar destFile: package.json
+[odo] I0112 18:22:41.365660   49760 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 822619973/package.json, destBase: /project, destFile: package.json
+[odo] I0112 18:22:41.365670   49760 sync.go:150] Corrected destinations: base: /project file: package.json
+[odo] I0112 18:22:41.505049   49760 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl status] for pod: frontend-mtj-app-5b577c5f4-jzwcs in container: runtime
+[odo] 
+ âœ“  Syncing files to the component [857ms]
+[odo] devrun                           STOPPED   
+[odo] debugrun                         STOPPED   
+[odo] 
+[odo] Executing devfile commands for component frontend-mtj
+[odo] I0112 18:22:41.761382   49760 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:22:41.761565   49760 pods.go:40] Waiting for component=frontend-mtj pod
+[odo]  â€¢  Executing install command "npm install"  ...
+[odo] I0112 18:22:41.786555   49760 pods.go:70] Status of frontend-mtj-app-5b577c5f4-jzwcs pod is Running
+[odo] I0112 18:22:41.786626   49760 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:19Z"}
+[odo] I0112 18:22:41.786638   49760 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:40Z"}
+[odo] I0112 18:22:41.786645   49760 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:40Z"}
+[odo] I0112 18:22:41.786651   49760 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:21:53Z"}
+[odo] I0112 18:22:41.786701   49760 pods.go:79] Container Status: {"name":"runtime","state":{"running":{"startedAt":"2022-01-12T23:22:39Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"registry.access.redhat.com/ubi8/nodejs-14:latest","imageID":"registry.access.redhat.com/ubi8/nodejs-14@sha256:4d83428d351d6e5a5c6d5704015a9f89379a758de8496a720aff96f33091c069","containerID":"cri-o://92aa72d75778f73ffa83439d7fe6cd929ebc85679a856d2fac795b44d12a11cd","started":true}
+[odo] I0112 18:22:41.786707   49760 pods.go:83] Pod frontend-mtj-app-5b577c5f4-jzwcs is Running
+[odo] I0112 18:22:41.786855   49760 exec.go:27] Executing command [/bin/sh -c cd /project && npm install] for pod: frontend-mtj-app-5b577c5f4-jzwcs in container: runtime
+[odo] 
+[odo] > nodemon@2.0.15 postinstall /project/node_modules/nodemon
+[odo] > node bin/postinstall || exit 0
+[odo] 
+[odo] Love nodemon? You can now support the project via the open collective:
+[odo]  > https://opencollective.com/nodemon/donate
+[odo] 
+[odo] npm notice created a lockfile as package-lock.json. You should commit this file.
+[odo] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):
+[odo] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[odo] npm WARN node-echo@0.0.1 No repository field.
+[odo] npm WARN node-echo@0.0.1 No license field.
+[odo] 
+[odo] added 116 packages from 53 contributors and audited 117 packages in 7.611s
+[odo] 
+[odo] 15 packages are looking for funding
+[odo]   run `npm fund` for details
+[odo] 
+[odo] found 0 vulnerabilities
+[odo] 
+[odo] 
+ âœ“  Executing install command "npm install" [9s]
+[odo]  â€¢  Executing run command "npm start"  ...
+[odo] I0112 18:22:50.602184   49760 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl start devrun] for pod: frontend-mtj-app-5b577c5f4-jzwcs in container: runtime
+[odo] devrun: started
+[odo] 
+ âœ“  Executing run command "npm start" [1s]
+[odo] I0112 18:22:52.896073   49760 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl status] for pod: frontend-mtj-app-5b577c5f4-jzwcs in container: runtime
+[odo] devrun                           RUNNING   pid 89, uptime 0:00:02
+[odo] debugrun                         STOPPED   
+[odo] 
+[odo] Pushing devfile component "frontend-mtj"
+[odo]  âœ“  Changes successfully pushed to component
+[odo] I0112 18:22:53.271772   49760 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo url list --context /tmp/822619973]
+[odo] I0112 18:22:53.424200   50030 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:53.424402   50030 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:53.496663   50030 context.go:141] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:22:53.496699   50030 context.go:92] absolute devfile path: '/tmp/822619973/devfile.yaml'
+[odo] I0112 18:22:53.497278   50030 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:53.497376   50030 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:53.497384   50030 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:53.505441   50030 schema.go:46] validated devfile schema
+[odo] I0112 18:22:53.508060   50030 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:53.508107   50030 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:53.529890   50030 kclient.go:231] Checking if "routes" resource is supported
+[odo] I0112 18:22:53.556013   50030 kubernetes.go:45] Listing ingresses with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-mtj
+[odo] I0112 18:22:53.556048   50030 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:53.558838   50030 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:53.579408   50030 routes.go:65] Listing routes with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-mtj
+[odo] Found the following URLs for component frontend-mtj
+[odo] NAME                  STATE      URL                                                                                                   PORT     SECURE     KIND
+[odo] frontend-mtj-8080     Pushed     http://frontend-mtj-8080-app-cmd-link-unlink-test132gnq.apps.etthbwfo.etthbwfo.interop.css-qe.com     8080     false      route
+[odo] http-3000             Pushed     http://http-3000-app-cmd-link-unlink-test132gnq.apps.etthbwfo.etthbwfo.interop.css-qe.com             3000     false      route
+[odo] I0112 18:22:53.597574   50030 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Created dir: /tmp/2875621606
+Running odo with args [odo create backend-smi --context /tmp/2875621606 --project cmd-link-unlink-test132gnq --devfile /home/cloud-user/odo/tests/examples/source/devfiles/python/devfile-registry.yaml]
+[odo] I0112 18:22:53.767030   50042 util.go:482] path /tmp/2875621606/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.767124   50042 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:53.767299   50042 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:53.767185   50042 util.go:482] path /tmp/2875621606/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768375   50042 util.go:482] path /tmp/2875621606/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768388   50042 util.go:482] path /tmp/2875621606/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768395   50042 util.go:482] path /tmp/2875621606/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768402   50042 util.go:482] path /tmp/2875621606/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768409   50042 util.go:482] path /tmp/2875621606/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768415   50042 util.go:482] path /tmp/2875621606/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768423   50042 util.go:482] path /tmp/2875621606/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:53.768430   50042 util.go:482] path /tmp/2875621606/.devfile.yaml doesn't exist, skipping it
+[odo] Devfile Object Creation
+[odo]  â€¢  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/python/devfile-registry.yaml  ...
+[odo] 
+ âœ“  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/python/devfile-registry.yaml [265749ns]
+[odo] I0112 18:22:53.769066   50042 context.go:141] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:53.769093   50042 context.go:92] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:53.769623   50042 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:53.769753   50042 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:53.769784   50042 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:53.783312   50042 schema.go:46] validated devfile schema
+[odo] I0112 18:22:53.786698   50042 context.go:141] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:53.786713   50042 context.go:92] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:53.787244   50042 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:53.787326   50042 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:53.787337   50042 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] Validation
+[odo]  â€¢  Validating if devfile name is correct  ...
+[odo] 
+ âœ“  Validating if devfile name is correct [40795ns]
+[odo]  â€¢  Validating the devfile for odo  ...
+[odo] 
+ âœ“  Validating the devfile for odo [7ms]
+[odo] I0112 18:22:53.794240   50042 schema.go:46] validated devfile schema
+[odo] I0112 18:22:53.794540   50042 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:53.794595   50042 context.go:141] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:53.794603   50042 context.go:92] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:53.795044   50042 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:53.795118   50042 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:53.795126   50042 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:53.803804   50042 schema.go:46] validated devfile schema
+[odo] I0112 18:22:53.805432   50042 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:22:53.805975   50042 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo]  â€¢  Updating the devfile with component name "backend-smi"  ...
+[odo] 
+ âœ“  Updating the devfile with component name "backend-smi" [1ms]
+[odo] 
+[odo] Please use `odo push` command to create the component with source deployed
+Running odo with args [odo url create --port 8080 --context /tmp/2875621606]
+[odo] I0112 18:22:53.967076   50052 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:53.967376   50052 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:54.050721   50052 context.go:141] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:54.050756   50052 context.go:92] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:54.051285   50052 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:54.051370   50052 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:54.051380   50052 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:54.071473   50052 schema.go:46] validated devfile schema
+[odo] I0112 18:22:54.074237   50052 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.074267   50052 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.120132   50052 kclient.go:231] Checking if "routes" resource is supported
+[odo]  âœ“  URL backend-smi-8080 created for component: backend-smi
+[odo] 
+[odo] To apply the URL configuration changes, please use `odo push`
+[odo] I0112 18:22:54.153930   50052 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:22:54.154319   50052 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo push --context /tmp/2875621606]
+[odo] I0112 18:22:54.371296   50070 context.go:141] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:54.371367   50070 context.go:92] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:54.371854   50070 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:54.371957   50070 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:54.371966   50070 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:54.372388   50070 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:54.372461   50070 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:54.379902   50070 schema.go:46] validated devfile schema
+[odo] I0112 18:22:54.383712   50070 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.383761   50070 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.556615   50070 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:22:54.574569   50070 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:22:54.579761   50070 context.go:141] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:54.579803   50070 context.go:92] absolute devfile path: '/tmp/2875621606/devfile.yaml'
+[odo] I0112 18:22:54.580455   50070 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:54.580570   50070 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:54.580592   50070 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:54.590737   50070 schema.go:46] validated devfile schema
+[odo] I0112 18:22:54.591107   50070 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.648667   50070 command.go:172] Build command: pip-install-requirements
+[odo] I0112 18:22:54.648687   50070 command.go:179] Run command: run-app
+[odo] 
+[odo] Validation
+[odo]  â€¢  Validating the devfile  ...
+[odo] 
+ âœ“  Validating the devfile [117040ns]
+[odo] 
+[odo] Creating Services for component backend-smi
+[odo] I0112 18:22:54.652487   50070 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:22:54.665923   50070 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:22:54.720810   50070 service.go:87] Getting list of services
+[odo] I0112 18:22:54.720845   50070 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:22:54.746312   50070 service.go:105] Getting services started from operator: redis-operator.v0.8.0
+[odo] I0112 18:22:54.746376   50070 service.go:209] Getting instances of: redisclusters.redis.redis.opstreelabs.in
+[odo] I0112 18:22:54.762732   50070 service.go:209] Getting instances of: redis.redis.redis.opstreelabs.in
+[odo]  âœ“  Services are in sync with the cluster, no changes are required
+[odo] 
+[odo] Creating Kubernetes resources for component backend-smi
+[odo] I0112 18:22:54.773537   50070 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:22:54.820247   50070 utils.go:224] Updating container py-web entrypoint with supervisord
+[odo] I0112 18:22:54.820288   50070 utils.go:108] Updating container py-web with supervisord volume mounts
+[odo] I0112 18:22:54.820297   50070 utils.go:118] Updating container py-web env with run command
+[odo] I0112 18:22:54.820304   50070 utils.go:135] Updating container py-web env with run command's workdir
+[odo] I0112 18:22:54.820311   50070 utils.go:171] Updating container py-web env with debug command
+[odo] I0112 18:22:54.820320   50070 utils.go:188] Updating container py-web env with debug command's workdir
+[odo] I0112 18:22:54.820327   50070 utils.go:197] Updating container py-web env with debug command's debugPort
+[odo] I0112 18:22:54.851453   50070 adapter.go:571] Creating deployment backend-smi-app
+[odo] I0112 18:22:54.851473   50070 adapter.go:572] The component name is backend-smi
+[odo] I0112 18:22:54.863477   50070 kclient.go:280] Kubernetes version is "v1.23.0+20a057a"
+[odo] I0112 18:22:54.863518   50070 kclient.go:292] Cluster has support for SSA: true
+[odo] I0112 18:22:54.967238   50070 adapter.go:599] Successfully created component backend-smi
+[odo] I0112 18:22:55.027096   50070 adapter.go:607] Successfully created Service for component backend-smi
+[odo] I0112 18:22:55.027137   50070 deployments.go:152] Waiting for backend-smi-app deployment rollout
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:22:55.040328   50070 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:54Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"backend-smi-app-797785d899\""}
+[odo] I0112 18:22:55.040357   50070 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:55.076172   50070 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:54Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"backend-smi-app-797785d899\""}
+[odo] I0112 18:22:55.076225   50070 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:22:54Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:22:55.076236   50070 deployments.go:192] Waiting for deployment "backend-smi-app" rollout to finish: 0 out of 1 new replicas have been updated...
+[odo] I0112 18:22:55.076252   50070 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:55.223372   50070 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:22:54Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:22:55.223401   50070 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:54Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"ReplicaSetUpdated","message":"ReplicaSet \"backend-smi-app-797785d899\" is progressing."}
+[odo] I0112 18:22:55.223412   50070 deployments.go:196] Waiting for deployment "backend-smi-app" rollout to finish: 0 of 1 updated replicas are available...
+[odo] I0112 18:22:55.223422   50070 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:58.666429   50070 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] 
+ âœ“  Waiting for component to start [12s]
+[odo] I0112 18:23:07.438038   50070 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:23:06Z","lastTransitionTime":"2022-01-12T23:23:06Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:23:07.438085   50070 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:23:06Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"backend-smi-app-797785d899\" has successfully progressed."}
+[odo] I0112 18:23:07.438142   50070 deployments.go:199] Deployment "backend-smi-app" successfully rolled out
+[odo] I0112 18:23:07.438153   50070 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:23:07.438219   50070 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:23:07.438378   50070 pods.go:40] Waiting for component=backend-smi pod
+[odo] I0112 18:23:07.455293   50070 pods.go:70] Status of backend-smi-app-797785d899-b4lrg pod is Running
+[odo] I0112 18:23:07.455443   50070 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:59Z"}
+[odo] I0112 18:23:07.455455   50070 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:07.455463   50070 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:07.455471   50070 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:54Z"}
+[odo] I0112 18:23:07.455625   50070 pods.go:79] Container Status: {"name":"py-web","state":{"running":{"startedAt":"2022-01-12T23:23:06Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"quay.io/eclipse/che-python-3.7:nightly","imageID":"quay.io/eclipse/che-python-3.7@sha256:35664a8d2aef59b5472516a297932ba996a30784af0f9b45b889fe9ac4ad83a5","containerID":"cri-o://d968dc2d82e734c1858108f5bae3946e2ccba5c36d41be07e3467fd8d224e5e3","started":true}
+[odo] I0112 18:23:07.455640   50070 pods.go:83] Pod backend-smi-app-797785d899-b4lrg is Running
+[odo] I0112 18:23:07.485486   50070 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:23:07.510308   50070 kclient.go:231] Checking if "deployments" resource is supported
+[odo] I0112 18:23:07.516060   50070 deployments.go:152] Waiting for backend-smi-app deployment rollout
+[odo]  âœ“  Links are in sync with the cluster, no changes are required
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:23:07.531881   50070 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:23:06Z","lastTransitionTime":"2022-01-12T23:23:06Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] 
+ âœ“  Waiting for component to start [17ms]
+[odo] I0112 18:23:07.531926   50070 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:23:06Z","lastTransitionTime":"2022-01-12T23:22:54Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"backend-smi-app-797785d899\" has successfully progressed."}
+[odo] I0112 18:23:07.533287   50070 deployments.go:199] Deployment "backend-smi-app" successfully rolled out
+[odo] I0112 18:23:07.533340   50070 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:23:07.533445   50070 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:23:07.533640   50070 pods.go:40] Waiting for component=backend-smi pod
+[odo] I0112 18:23:07.547746   50070 pods.go:70] Status of backend-smi-app-797785d899-b4lrg pod is Running
+[odo] I0112 18:23:07.547800   50070 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:59Z"}
+[odo] I0112 18:23:07.547809   50070 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:07.547817   50070 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:07.547824   50070 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:54Z"}
+[odo] I0112 18:23:07.547863   50070 pods.go:79] Container Status: {"name":"py-web","state":{"running":{"startedAt":"2022-01-12T23:23:06Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"quay.io/eclipse/che-python-3.7:nightly","imageID":"quay.io/eclipse/che-python-3.7@sha256:35664a8d2aef59b5472516a297932ba996a30784af0f9b45b889fe9ac4ad83a5","containerID":"cri-o://d968dc2d82e734c1858108f5bae3946e2ccba5c36d41be07e3467fd8d224e5e3","started":true}
+[odo] I0112 18:23:07.547871   50070 pods.go:83] Pod backend-smi-app-797785d899-b4lrg is Running
+[odo] I0112 18:23:07.547961   50070 kclient.go:231] Checking if "routes" resource is supported
+[odo] 
+[odo] Applying URL changes
+[odo] I0112 18:23:07.569392   50070 kubernetes.go:45] Listing ingresses with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=backend-smi
+[odo] I0112 18:23:07.569405   50070 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:23:07.585181   50070 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:23:07.598494   50070 routes.go:65] Listing routes with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=backend-smi
+[odo]  âœ“  URL web: http://web-app-cmd-link-unlink-test132gnq.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo]  âœ“  URL backend-smi-8080: http://backend-smi-8080-app-cmd-link-unlink-test132gnq.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo] 
+[odo] Syncing to component backend-smi
+[odo]  â€¢  Checking files for pushing  ...
+[odo] I0112 18:23:07.897030   50070 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606, destBase: ., destFile: .
+[odo] I0112 18:23:07.897052   50070 file_indexer.go:421] Corrected destinations: base: . file: .
+[odo] 
+ âœ“  Checking files for pushing [614582ns]
+[odo]  â€¢  Syncing files to the component  ...
+[odo] I0112 18:23:07.897158   50070 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/.gitignore, destBase: ., destFile: .gitignore
+[odo] I0112 18:23:07.897174   50070 file_indexer.go:421] Corrected destinations: base: . file: .gitignore
+[odo] I0112 18:23:07.897199   50070 file_indexer.go:466] file added: /tmp/2875621606/.gitignore
+[odo] I0112 18:23:07.897236   50070 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/.odo, destBase: ., destFile: .odo
+[odo] I0112 18:23:07.897240   50070 file_indexer.go:421] Corrected destinations: base: . file: .odo
+[odo] I0112 18:23:07.897265   50070 file_indexer.go:466] file added: /tmp/2875621606/.odo
+[odo] I0112 18:23:07.897276   50070 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/devfile.yaml, destBase: ., destFile: devfile.yaml
+[odo] I0112 18:23:07.897280   50070 file_indexer.go:421] Corrected destinations: base: . file: devfile.yaml
+[odo] I0112 18:23:07.897302   50070 file_indexer.go:466] file added: /tmp/2875621606/devfile.yaml
+[odo] I0112 18:23:07.897309   50070 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/requirements.txt, destBase: ., destFile: requirements.txt
+[odo] I0112 18:23:07.897313   50070 file_indexer.go:421] Corrected destinations: base: . file: requirements.txt
+[odo] I0112 18:23:07.897342   50070 file_indexer.go:466] file added: /tmp/2875621606/requirements.txt
+[odo] I0112 18:23:07.897353   50070 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/wsgi.py, destBase: ., destFile: wsgi.py
+[odo] I0112 18:23:07.897357   50070 file_indexer.go:421] Corrected destinations: base: . file: wsgi.py
+[odo] I0112 18:23:07.897381   50070 file_indexer.go:466] file added: /tmp/2875621606/wsgi.py
+[odo] I0112 18:23:07.897471   50070 adapter.go:144] List of files to be deleted: +[]
+[odo] I0112 18:23:07.897480   50070 adapter.go:146] List of files changed: +[/tmp/2875621606/.gitignore /tmp/2875621606/devfile.yaml /tmp/2875621606/requirements.txt /tmp/2875621606/wsgi.py]
+[odo] I0112 18:23:07.897496   50070 adapter.go:180] Push: componentName: backend-smi, path: /tmp/2875621606, files: [/tmp/2875621606/.gitignore /tmp/2875621606/devfile.yaml /tmp/2875621606/requirements.txt /tmp/2875621606/wsgi.py], delFiles: [*], isForcePush: true
+[odo] I0112 18:23:07.897530   50070 adapter.go:304] remote files marked for deletion are [/projects/*]
+[odo] I0112 18:23:07.897548   50070 exec.go:27] Executing command [rm -rf /projects/*] for pod: backend-smi-app-797785d899-b4lrg in container: py-web
+[odo] I0112 18:23:08.115234   50070 adapter.go:225] Copying files /tmp/2875621606/.gitignore /tmp/2875621606/devfile.yaml /tmp/2875621606/requirements.txt /tmp/2875621606/wsgi.py to pod
+[odo] I0112 18:23:08.115290   50070 sync.go:35] CopyFile arguments: localPath /tmp/2875621606, dest /projects/2875621606, targetPath /projects, copyFiles [/tmp/2875621606/.gitignore /tmp/2875621606/devfile.yaml /tmp/2875621606/requirements.txt /tmp/2875621606/wsgi.py], globalExps [/tmp/2875621606/.git /tmp/2875621606/tmp/2875621606/.odo/env /tmp/2875621606/.odo/odo-file-index.json]
+[odo] I0112 18:23:08.115331   50070 pods.go:188] Executing command tar xf - -C /projects
+[odo] I0112 18:23:08.115493   50070 sync.go:76] makeTar arguments: srcPath: /tmp/2875621606, destPath: /projects/2875621606, files: [/tmp/2875621606/.gitignore /tmp/2875621606/devfile.yaml /tmp/2875621606/requirements.txt /tmp/2875621606/wsgi.py]
+[odo] I0112 18:23:08.115654   50070 sync.go:106] Got abs path: /tmp/2875621606/.gitignore
+[odo] I0112 18:23:08.115674   50070 sync.go:107] Making /tmp/2875621606 relative to /tmp/2875621606/.gitignore
+[odo] I0112 18:23:08.115683   50070 sync.go:123] makeTar srcFile: 2875621606/.gitignore
+[odo] I0112 18:23:08.115688   50070 sync.go:124] makeTar destFile: .gitignore
+[odo] I0112 18:23:08.115695   50070 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/.gitignore, destBase: /projects, destFile: .gitignore
+[odo] I0112 18:23:08.115701   50070 sync.go:150] Corrected destinations: base: /projects file: .gitignore
+[odo] I0112 18:23:08.261446   50070 sync.go:106] Got abs path: /tmp/2875621606/devfile.yaml
+[odo] I0112 18:23:08.261465   50070 sync.go:107] Making /tmp/2875621606 relative to /tmp/2875621606/devfile.yaml
+[odo] I0112 18:23:08.261475   50070 sync.go:123] makeTar srcFile: 2875621606/devfile.yaml
+[odo] I0112 18:23:08.261483   50070 sync.go:124] makeTar destFile: devfile.yaml
+[odo] I0112 18:23:08.261490   50070 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/devfile.yaml, destBase: /projects, destFile: devfile.yaml
+[odo] I0112 18:23:08.261495   50070 sync.go:150] Corrected destinations: base: /projects file: devfile.yaml
+[odo] I0112 18:23:08.261684   50070 sync.go:106] Got abs path: /tmp/2875621606/requirements.txt
+[odo] I0112 18:23:08.261691   50070 sync.go:107] Making /tmp/2875621606 relative to /tmp/2875621606/requirements.txt
+[odo] I0112 18:23:08.261698   50070 sync.go:123] makeTar srcFile: 2875621606/requirements.txt
+[odo] I0112 18:23:08.261703   50070 sync.go:124] makeTar destFile: requirements.txt
+[odo] I0112 18:23:08.261707   50070 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/requirements.txt, destBase: /projects, destFile: requirements.txt
+[odo] I0112 18:23:08.261711   50070 sync.go:150] Corrected destinations: base: /projects file: requirements.txt
+[odo] I0112 18:23:08.261838   50070 sync.go:106] Got abs path: /tmp/2875621606/wsgi.py
+[odo] I0112 18:23:08.261845   50070 sync.go:107] Making /tmp/2875621606 relative to /tmp/2875621606/wsgi.py
+[odo] I0112 18:23:08.261851   50070 sync.go:123] makeTar srcFile: 2875621606/wsgi.py
+[odo] I0112 18:23:08.261856   50070 sync.go:124] makeTar destFile: wsgi.py
+[odo] I0112 18:23:08.261861   50070 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 2875621606/wsgi.py, destBase: /projects, destFile: wsgi.py
+[odo] I0112 18:23:08.261865   50070 sync.go:150] Corrected destinations: base: /projects file: wsgi.py
+[odo] I0112 18:23:08.382773   50070 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl status] for pod: backend-smi-app-797785d899-b4lrg in container: py-web
+[odo] 
+ âœ“  Syncing files to the component [484ms]
+[odo] I0112 18:23:08.631816   50070 preference.go:210] The path for preference file is /tmp/346749230/preference.yaml
+[odo] I0112 18:23:08.632051   50070 pods.go:40] Waiting for component=backend-smi pod
+[odo] debugrun                         STOPPED   
+[odo] devrun                           STOPPED   
+[odo] 
+[odo] Executing devfile commands for component backend-smi
+[odo] I0112 18:23:08.657108   50070 pods.go:70] Status of backend-smi-app-797785d899-b4lrg pod is Running
+[odo] I0112 18:23:08.657175   50070 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:59Z"}
+[odo] I0112 18:23:08.657194   50070 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:08.657221   50070 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:08.657231   50070 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:54Z"}
+[odo] I0112 18:23:08.657284   50070 pods.go:79] Container Status: {"name":"py-web","state":{"running":{"startedAt":"2022-01-12T23:23:06Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"quay.io/eclipse/che-python-3.7:nightly","imageID":"quay.io/eclipse/che-python-3.7@sha256:35664a8d2aef59b5472516a297932ba996a30784af0f9b45b889fe9ac4ad83a5","containerID":"cri-o://d968dc2d82e734c1858108f5bae3946e2ccba5c36d41be07e3467fd8d224e5e3","started":true}
+[odo] I0112 18:23:08.657306   50070 pods.go:83] Pod backend-smi-app-797785d899-b4lrg is Running
+[odo]  â€¢  Executing pip-install-requirements command "pip install --user -r requirements.txt"  ...
+[odo] I0112 18:23:08.657468   50070 exec.go:27] Executing command [/bin/sh -c pip install --user -r requirements.txt] for pod: backend-smi-app-797785d899-b4lrg in container: py-web
+[odo] Collecting gunicorn
+[odo]   Downloading https://files.pythonhosted.org/packages/e4/dd/5b190393e6066286773a67dfcc2f9492058e9b57c4867a95f1ba5caf0a83/gunicorn-20.1.0-py3-none-any.whl (79kB)
+[odo] Collecting numpy
+[odo]   Downloading https://files.pythonhosted.org/packages/50/46/292cff79f5b30151b027400efdb3f740ea03271b600751b6696cf550c10d/numpy-1.21.5-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7MB)
+[odo] Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.7/site-packages (from gunicorn->-r requirements.txt (line 1)) (41.4.0)
+[odo] Installing collected packages: gunicorn, numpy
+[odo]   WARNING: The script gunicorn is installed in '/home/user/.local/bin' which is not on PATH.
+[odo]   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+[odo]   WARNING: The scripts f2py, f2py3 and f2py3.7 are installed in '/home/user/.local/bin' which is not on PATH.
+[odo]   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+[odo] Successfully installed gunicorn-20.1.0 numpy-1.21.5
+[odo] WARNING: You are using pip version 19.3; however, version 21.3.1 is available.
+[odo] You should consider upgrading via the 'pip install --upgrade pip' command.
+[odo] I0112 18:23:17.158103   50070 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl start devrun] for pod: backend-smi-app-797785d899-b4lrg in container: py-web
+[odo] 
+ âœ“  Executing pip-install-requirements command "pip install --user -r requirements.txt" [9s]
+[odo]  â€¢  Executing run-app command "python app.py"  ...
+[odo]  âš   Unable to convert object to event
+[odo] I0112 18:23:30.181301   50070 exec.go:43] ExecuteCommand returned an an err: error while streaming command: Internal error occurred: admission plugin "security.openshift.io/SCCExecRestrictions" failed to complete validation in 13s. for command '[/opt/odo/bin/supervisord ctl start devrun]'. output: 
+[odo]  âœ—  Executing run-app command "python app.py" [13s]
+[odo]  âœ—  Failed to start component with name "backend-smi". Error: Failed to create the component: command execution failed: unable to execute the run command: unable to exec command [/opt/odo/bin/supervisord ctl start devrun]: 
+[odo] : error while streaming command: Internal error occurred: admission plugin "security.openshift.io/SCCExecRestrictions" failed to complete validation in 13s
+Deleting dir: /tmp/822619973
+Deleting dir: /tmp/2875621606
+Deleting project: cmd-link-unlink-test132gnq
+Running odo with args [odo project delete cmd-link-unlink-test132gnq -f]
+[odo] I0112 18:23:30.309246   50208 util.go:482] path /home/cloud-user/odo/tests/integration/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:23:30.309370   50208 util.go:482] path /home/cloud-user/odo/tests/integration/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:23:30.309310   50208 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:23:30.309539   50208 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:23:30.374378   50208 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:23:30.396038   50208 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:23:30.461315   50208 kclient.go:231] Checking if "projects" resource is supported
+[odo]  âœ—  Internal error occurred: rpc error: code = Unknown desc = context deadline exceeded
+
+â€¢â€¢
+------------------------------
+Created dir: /tmp/3854991443
+Setting KUBECONFIG=/tmp/3854991443/config
+Creating a new project: cmd-link-unlink-test113gah
+Running odo with args [odo project create cmd-link-unlink-test113gah -w -v4]
+[odo] I0112 18:21:47.859149   49227 preference.go:210] The path for preference file is /home/cloud-user/.odo/preference.yaml
+[odo] I0112 18:21:47.859283   49227 runnable.go:52] Skipping telemetry question because there is no terminal (tty)
+[odo] I0112 18:21:47.859873   49227 segment.go:246] Checking telemetry enable status
+[odo] I0112 18:21:47.859886   49227 segment.go:259] Sending telemetry disabled by ODO_DISABLE_TELEMETRY=true
+[odo] I0112 18:21:47.859972   49227 util.go:482] path /home/cloud-user/odo/tests/integration/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:47.859981   49227 util.go:482] path /home/cloud-user/odo/tests/integration/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:47.859425   49227 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:47.866778   49227 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:47.937743   49227 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo]  â€¢  Waiting for project to come up  ...
+[odo] I0112 18:21:48.019255   49227 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:21:48.707461   49227 projects.go:192] Status of creation of project cmd-link-unlink-test113gah is Active
+[odo] I0112 18:21:48.707487   49227 projects.go:197] Project cmd-link-unlink-test113gah now exists
+[odo] 
+ âœ“  Waiting for project to come up [695ms]
+[odo]  âœ“  Project "cmd-link-unlink-test113gah" is ready for use
+[odo] I0112 18:21:48.714046   49227 namespace.go:186] Status of creation of service account &ServiceAccount{ObjectMeta:{default  cmd-link-unlink-test113gah  087b1b89-9f9c-4b33-b069-7ba5addb246d 34801 0 2022-01-12 18:21:48 -0500 EST <nil> <nil> map[] map[openshift.io/create-dockercfg-secrets.pending-token:default-token-ppz4q] [] []  []},Secrets:[]ObjectReference{ObjectReference{Kind:,Namespace:,Name:default-token-lq4f5,UID:,APIVersion:,ResourceVersion:,FieldPath:,},},ImagePullSecrets:[]LocalObjectReference{},AutomountServiceAccountToken:nil,} is ready
+[odo] I0112 18:21:48.727538   49227 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo]  âœ“  New project created and now using project: cmd-link-unlink-test113gah
+Running oc with args [oc create configmap config-map-for-cleanup --from-literal type=testing --from-literal team=odo -n cmd-link-unlink-test113gah]
+[oc] configmap/config-map-for-cleanup created
+Current working dir: /home/cloud-user/odo/tests/integration
+Running odo with args [odo registry update DefaultDevfileRegistry https://registry.stage.devfile.io -f]
+[odo] Successfully updated registry
+[odo] I0112 18:21:49.231088   49318 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:21:49.231286   49318 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:21:49.232165   49318 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo catalog list services]
+[odo] I0112 18:21:50.391528   49444 util.go:482] path /home/cloud-user/odo/tests/integration/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.391597   49444 util.go:482] path /home/cloud-user/odo/tests/integration/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.391545   49444 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:50.392831   49444 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:50.475874   49444 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:50.477174   49444 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:21:50.499017   49444 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:21:50.576398   49444 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo] Services available through Operators
+[odo] NAME                      CRDs
+[odo] redis-operator.v0.8.0     RedisCluster, Redis
+Created dir: /tmp/1180017212
+Running odo with args [odo create frontend-nmo --context /tmp/1180017212 --project cmd-link-unlink-test113gah --devfile /home/cloud-user/odo/tests/examples/source/devfiles/nodejs/devfile-registry.yaml]
+[odo] Devfile Object Creation
+[odo]  â€¢  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/nodejs/devfile-registry.yaml  ...
+[odo] 
+ âœ“  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/nodejs/devfile-registry.yaml [206008ns]
+[odo] I0112 18:21:50.740795   49483 util.go:482] path /tmp/1180017212/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740861   49483 util.go:482] path /tmp/1180017212/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740877   49483 util.go:482] path /tmp/1180017212/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740881   49483 util.go:482] path /tmp/1180017212/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740887   49483 util.go:482] path /tmp/1180017212/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740892   49483 util.go:482] path /tmp/1180017212/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740896   49483 util.go:482] path /tmp/1180017212/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.740888   49483 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:50.740967   49483 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:50.740900   49483 util.go:482] path /tmp/1180017212/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.741608   49483 util.go:482] path /tmp/1180017212/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.741617   49483 util.go:482] path /tmp/1180017212/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:21:50.742024   49483 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:50.742036   49483 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:50.742792   49483 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:50.742874   49483 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:50.742884   49483 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:50.754168   49483 schema.go:46] validated devfile schema
+[odo] Validation
+[odo]  â€¢  Validating if devfile name is correct  ...
+[odo] 
+ âœ“  Validating if devfile name is correct [30434ns]
+[odo]  â€¢  Validating the devfile for odo  ...
+[odo] I0112 18:21:50.756698   49483 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:50.756709   49483 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:50.757148   49483 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:50.757259   49483 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:50.757279   49483 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:50.766390   49483 schema.go:46] validated devfile schema
+[odo] 
+ âœ“  Validating the devfile for odo [10ms]
+[odo] I0112 18:21:50.766817   49483 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:50.766869   49483 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:50.766876   49483 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:50.767372   49483 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:50.767443   49483 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:50.767450   49483 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo]  â€¢  Updating the devfile with component name "frontend-nmo"  ...
+[odo] I0112 18:21:50.775094   49483 schema.go:46] validated devfile schema
+[odo] 
+ âœ“  Updating the devfile with component name "frontend-nmo" [22ms]
+[odo] 
+[odo] Please use `odo push` command to create the component with source deployed
+[odo] I0112 18:21:50.797664   49483 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:21:50.798301   49483 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo url create --port 8080 --context /tmp/1180017212]
+[odo] I0112 18:21:50.968535   49523 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:21:50.968861   49523 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:51.084783   49523 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:51.137417   49523 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:51.137455   49523 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:51.138098   49523 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:51.138189   49523 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:51.138215   49523 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:51.145468   49523 schema.go:46] validated devfile schema
+[odo] I0112 18:21:51.148272   49523 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:51.148310   49523 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:51.170905   49523 kclient.go:231] Checking if "routes" resource is supported
+[odo]  âœ“  URL frontend-nmo-8080 created for component: frontend-nmo
+[odo] 
+[odo] To apply the URL configuration changes, please use `odo push`
+[odo] I0112 18:21:51.202750   49523 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:21:51.203088   49523 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo push --context /tmp/1180017212]
+[odo] I0112 18:21:51.361998   49576 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:51.362068   49576 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:51.362552   49576 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:51.362569   49576 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:21:51.362646   49576 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:51.362671   49576 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:51.379000   49576 schema.go:46] validated devfile schema
+[odo] I0112 18:21:51.382282   49576 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:51.382323   49576 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:51.437021   49576 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:21:51.441042   49576 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:21:51.483071   49576 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:21:51.497962   49576 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:51.497999   49576 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:21:51.498511   49576 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:21:51.498591   49576 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:21:51.498600   49576 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:21:51.517311   49576 schema.go:46] validated devfile schema
+[odo] I0112 18:21:51.517580   49576 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:21:51.590881   49576 command.go:172] Build command: install
+[odo] I0112 18:21:51.590897   49576 command.go:179] Run command: run
+[odo] 
+[odo] Validation
+[odo]  â€¢  Validating the devfile  ...
+[odo] 
+ âœ“  Validating the devfile [80599ns]
+[odo] 
+[odo] Creating Services for component frontend-nmo
+[odo] I0112 18:21:51.594336   49576 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:21:51.603242   49576 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:21:51.653926   49576 service.go:87] Getting list of services
+[odo] I0112 18:21:51.653964   49576 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:21:51.710786   49576 service.go:105] Getting services started from operator: redis-operator.v0.8.0
+[odo] I0112 18:21:51.710818   49576 service.go:209] Getting instances of: redisclusters.redis.redis.opstreelabs.in
+[odo] I0112 18:21:51.818979   49576 service.go:209] Getting instances of: redis.redis.redis.opstreelabs.in
+[odo] I0112 18:21:51.907731   49576 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo]  âœ“  Services are in sync with the cluster, no changes are required
+[odo] 
+[odo] Creating Kubernetes resources for component frontend-nmo
+[odo] I0112 18:21:51.969508   49576 utils.go:224] Updating container runtime entrypoint with supervisord
+[odo] I0112 18:21:51.969537   49576 utils.go:108] Updating container runtime with supervisord volume mounts
+[odo] I0112 18:21:51.969545   49576 utils.go:118] Updating container runtime env with run command
+[odo] I0112 18:21:51.969553   49576 utils.go:135] Updating container runtime env with run command's workdir
+[odo] I0112 18:21:51.969560   49576 utils.go:171] Updating container runtime env with debug command
+[odo] I0112 18:21:51.969568   49576 utils.go:188] Updating container runtime env with debug command's workdir
+[odo] I0112 18:21:51.969575   49576 utils.go:197] Updating container runtime env with debug command's debugPort
+[odo] I0112 18:21:51.976292   49576 adapter.go:571] Creating deployment frontend-nmo-app
+[odo] I0112 18:21:51.976317   49576 adapter.go:572] The component name is frontend-nmo
+[odo] I0112 18:21:51.982044   49576 kclient.go:280] Kubernetes version is "v1.23.0+20a057a"
+[odo] I0112 18:21:51.982085   49576 kclient.go:292] Cluster has support for SSA: true
+[odo] I0112 18:21:52.080608   49576 adapter.go:599] Successfully created component frontend-nmo
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:21:52.139132   49576 adapter.go:607] Successfully created Service for component frontend-nmo
+[odo] I0112 18:21:52.139174   49576 deployments.go:152] Waiting for frontend-nmo-app deployment rollout
+[odo] I0112 18:21:52.177879   49576 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:21:52.294834   49576 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:21:51Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"frontend-nmo-app-58bc644c84\""}
+[odo] I0112 18:21:52.294870   49576 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:21:52.509817   49576 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:21:51Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"frontend-nmo-app-58bc644c84\""}
+[odo] I0112 18:21:52.509868   49576 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:21:51Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:21:52.509880   49576 deployments.go:192] Waiting for deployment "frontend-nmo-app" rollout to finish: 0 out of 1 new replicas have been updated...
+[odo] I0112 18:21:52.509896   49576 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:21:52.830826   49576 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:21:51Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:21:52.830859   49576 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:21:52Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"ReplicaSetUpdated","message":"ReplicaSet \"frontend-nmo-app-58bc644c84\" is progressing."}
+[odo] I0112 18:21:52.830868   49576 deployments.go:196] Waiting for deployment "frontend-nmo-app" rollout to finish: 0 of 1 updated replicas are available...
+[odo] I0112 18:21:52.830878   49576 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] 
+ âœ“  Waiting for component to start [47s]
+[odo] I0112 18:22:39.580523   49576 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:22:38Z","lastTransitionTime":"2022-01-12T23:22:38Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:22:39.580563   49576 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:38Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"frontend-nmo-app-58bc644c84\" has successfully progressed."}
+[odo] I0112 18:22:39.580615   49576 deployments.go:199] Deployment "frontend-nmo-app" successfully rolled out
+[odo] I0112 18:22:39.580625   49576 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:39.580714   49576 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:22:39.580883   49576 pods.go:40] Waiting for component=frontend-nmo pod
+[odo] I0112 18:22:39.601189   49576 pods.go:70] Status of frontend-nmo-app-58bc644c84-z78w8 pod is Running
+[odo] I0112 18:22:39.601356   49576 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:14Z"}
+[odo] I0112 18:22:39.601368   49576 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:39Z"}
+[odo] I0112 18:22:39.601376   49576 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:39Z"}
+[odo] I0112 18:22:39.601383   49576 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:21:51Z"}
+[odo] I0112 18:22:39.601528   49576 pods.go:79] Container Status: {"name":"runtime","state":{"running":{"startedAt":"2022-01-12T23:22:38Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"registry.access.redhat.com/ubi8/nodejs-14:latest","imageID":"registry.access.redhat.com/ubi8/nodejs-14@sha256:4d83428d351d6e5a5c6d5704015a9f89379a758de8496a720aff96f33091c069","containerID":"cri-o://9a8c1eba23c48fb8c92f73051fd82b0a30b6eae04396fee924acb66931e57bde","started":true}
+[odo] I0112 18:22:39.601546   49576 pods.go:83] Pod frontend-nmo-app-58bc644c84-z78w8 is Running
+[odo] I0112 18:22:39.638529   49576 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:22:39.714817   49576 kclient.go:231] Checking if "deployments" resource is supported
+[odo] I0112 18:22:39.722714   49576 deployments.go:152] Waiting for frontend-nmo-app deployment rollout
+[odo]  âœ“  Links are in sync with the cluster, no changes are required
+[odo]  â€¢  Waiting for component to start  ...
+[odo] 
+ âœ“  Waiting for component to start [5ms]
+[odo] I0112 18:22:39.728512   49576 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:22:38Z","lastTransitionTime":"2022-01-12T23:22:38Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:22:39.728558   49576 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:38Z","lastTransitionTime":"2022-01-12T23:21:51Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"frontend-nmo-app-58bc644c84\" has successfully progressed."}
+[odo] I0112 18:22:39.728587   49576 deployments.go:199] Deployment "frontend-nmo-app" successfully rolled out
+[odo] I0112 18:22:39.728597   49576 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:39.728633   49576 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:22:39.728782   49576 pods.go:40] Waiting for component=frontend-nmo pod
+[odo] I0112 18:22:39.752750   49576 pods.go:70] Status of frontend-nmo-app-58bc644c84-z78w8 pod is Running
+[odo] I0112 18:22:39.752810   49576 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:14Z"}
+[odo] I0112 18:22:39.752820   49576 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:39Z"}
+[odo] I0112 18:22:39.752839   49576 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:39Z"}
+[odo] I0112 18:22:39.752846   49576 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:21:51Z"}
+[odo] I0112 18:22:39.752890   49576 pods.go:79] Container Status: {"name":"runtime","state":{"running":{"startedAt":"2022-01-12T23:22:38Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"registry.access.redhat.com/ubi8/nodejs-14:latest","imageID":"registry.access.redhat.com/ubi8/nodejs-14@sha256:4d83428d351d6e5a5c6d5704015a9f89379a758de8496a720aff96f33091c069","containerID":"cri-o://9a8c1eba23c48fb8c92f73051fd82b0a30b6eae04396fee924acb66931e57bde","started":true}
+[odo] I0112 18:22:39.752899   49576 pods.go:83] Pod frontend-nmo-app-58bc644c84-z78w8 is Running
+[odo] I0112 18:22:39.752949   49576 kclient.go:231] Checking if "routes" resource is supported
+[odo] I0112 18:22:39.768179   49576 kubernetes.go:45] Listing ingresses with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-nmo
+[odo] I0112 18:22:39.768193   49576 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] 
+[odo] Applying URL changes
+[odo] I0112 18:22:39.775522   49576 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:39.813990   49576 routes.go:65] Listing routes with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-nmo
+[odo]  âœ“  URL http-3000: http://http-3000-app-cmd-link-unlink-test113gah.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo]  âœ“  URL frontend-nmo-8080: http://frontend-nmo-8080-app-cmd-link-unlink-test113gah.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo] 
+[odo] Syncing to component frontend-nmo
+[odo]  â€¢  Checking files for pushing  ...
+[odo] 
+ âœ“  Checking files for pushing [540364ns]
+[odo]  â€¢  Syncing files to the component  ...
+[odo] I0112 18:22:40.177267   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212, destBase: ., destFile: .
+[odo] I0112 18:22:40.177278   49576 file_indexer.go:421] Corrected destinations: base: . file: .
+[odo] I0112 18:22:40.177381   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/.gitignore, destBase: ., destFile: .gitignore
+[odo] I0112 18:22:40.177389   49576 file_indexer.go:421] Corrected destinations: base: . file: .gitignore
+[odo] I0112 18:22:40.177414   49576 file_indexer.go:466] file added: /tmp/1180017212/.gitignore
+[odo] I0112 18:22:40.177429   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/.odo, destBase: ., destFile: .odo
+[odo] I0112 18:22:40.177433   49576 file_indexer.go:421] Corrected destinations: base: . file: .odo
+[odo] I0112 18:22:40.177460   49576 file_indexer.go:466] file added: /tmp/1180017212/.odo
+[odo] I0112 18:22:40.177465   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/Dockerfile, destBase: ., destFile: Dockerfile
+[odo] I0112 18:22:40.177469   49576 file_indexer.go:421] Corrected destinations: base: . file: Dockerfile
+[odo] I0112 18:22:40.177490   49576 file_indexer.go:466] file added: /tmp/1180017212/Dockerfile
+[odo] I0112 18:22:40.177498   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/devfile.yaml, destBase: ., destFile: devfile.yaml
+[odo] I0112 18:22:40.177502   49576 file_indexer.go:421] Corrected destinations: base: . file: devfile.yaml
+[odo] I0112 18:22:40.177524   49576 file_indexer.go:466] file added: /tmp/1180017212/devfile.yaml
+[odo] I0112 18:22:40.177531   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/package.json, destBase: ., destFile: package.json
+[odo] I0112 18:22:40.177535   49576 file_indexer.go:421] Corrected destinations: base: . file: package.json
+[odo] I0112 18:22:40.177556   49576 file_indexer.go:466] file added: /tmp/1180017212/package.json
+[odo] I0112 18:22:40.177562   49576 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/server.js, destBase: ., destFile: server.js
+[odo] I0112 18:22:40.177566   49576 file_indexer.go:421] Corrected destinations: base: . file: server.js
+[odo] I0112 18:22:40.177587   49576 file_indexer.go:466] file added: /tmp/1180017212/server.js
+[odo] I0112 18:22:40.177696   49576 adapter.go:144] List of files to be deleted: +[]
+[odo] I0112 18:22:40.177702   49576 adapter.go:146] List of files changed: +[/tmp/1180017212/package.json /tmp/1180017212/server.js /tmp/1180017212/.gitignore /tmp/1180017212/Dockerfile /tmp/1180017212/devfile.yaml]
+[odo] I0112 18:22:40.177717   49576 adapter.go:180] Push: componentName: frontend-nmo, path: /tmp/1180017212, files: [/tmp/1180017212/package.json /tmp/1180017212/server.js /tmp/1180017212/.gitignore /tmp/1180017212/Dockerfile /tmp/1180017212/devfile.yaml], delFiles: [*], isForcePush: true
+[odo] I0112 18:22:40.177753   49576 adapter.go:198] Creating /project on the remote container if it doesn't already exist
+[odo] I0112 18:22:40.177766   49576 exec.go:27] Executing command [mkdir -p /project] for pod: frontend-nmo-app-58bc644c84-z78w8 in container: runtime
+[odo] I0112 18:22:40.623251   49576 adapter.go:304] remote files marked for deletion are [/project/*]
+[odo] I0112 18:22:40.623295   49576 exec.go:27] Executing command [rm -rf /project/*] for pod: frontend-nmo-app-58bc644c84-z78w8 in container: runtime
+[odo] I0112 18:22:40.930362   49576 adapter.go:225] Copying files /tmp/1180017212/package.json /tmp/1180017212/server.js /tmp/1180017212/.gitignore /tmp/1180017212/Dockerfile /tmp/1180017212/devfile.yaml to pod
+[odo] I0112 18:22:40.930401   49576 sync.go:35] CopyFile arguments: localPath /tmp/1180017212, dest /project/1180017212, targetPath /project, copyFiles [/tmp/1180017212/package.json /tmp/1180017212/server.js /tmp/1180017212/.gitignore /tmp/1180017212/Dockerfile /tmp/1180017212/devfile.yaml], globalExps [/tmp/1180017212/.git /tmp/1180017212/tmp/1180017212/.odo/env /tmp/1180017212/.odo/odo-file-index.json]
+[odo] I0112 18:22:40.930445   49576 pods.go:188] Executing command tar xf - -C /project
+[odo] I0112 18:22:40.930551   49576 sync.go:76] makeTar arguments: srcPath: /tmp/1180017212, destPath: /project/1180017212, files: [/tmp/1180017212/package.json /tmp/1180017212/server.js /tmp/1180017212/.gitignore /tmp/1180017212/Dockerfile /tmp/1180017212/devfile.yaml]
+[odo] I0112 18:22:40.930636   49576 sync.go:106] Got abs path: /tmp/1180017212/package.json
+[odo] I0112 18:22:40.930644   49576 sync.go:107] Making /tmp/1180017212 relative to /tmp/1180017212/package.json
+[odo] I0112 18:22:40.930652   49576 sync.go:123] makeTar srcFile: 1180017212/package.json
+[odo] I0112 18:22:40.930657   49576 sync.go:124] makeTar destFile: package.json
+[odo] I0112 18:22:40.930663   49576 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/package.json, destBase: /project, destFile: package.json
+[odo] I0112 18:22:40.930668   49576 sync.go:150] Corrected destinations: base: /project file: package.json
+[odo] I0112 18:22:41.152813   49576 sync.go:106] Got abs path: /tmp/1180017212/server.js
+[odo] I0112 18:22:41.152990   49576 sync.go:107] Making /tmp/1180017212 relative to /tmp/1180017212/server.js
+[odo] I0112 18:22:41.153001   49576 sync.go:123] makeTar srcFile: 1180017212/server.js
+[odo] I0112 18:22:41.153007   49576 sync.go:124] makeTar destFile: server.js
+[odo] I0112 18:22:41.153013   49576 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/server.js, destBase: /project, destFile: server.js
+[odo] I0112 18:22:41.153019   49576 sync.go:150] Corrected destinations: base: /project file: server.js
+[odo] I0112 18:22:41.153288   49576 sync.go:106] Got abs path: /tmp/1180017212/.gitignore
+[odo] I0112 18:22:41.153311   49576 sync.go:107] Making /tmp/1180017212 relative to /tmp/1180017212/.gitignore
+[odo] I0112 18:22:41.153319   49576 sync.go:123] makeTar srcFile: 1180017212/.gitignore
+[odo] I0112 18:22:41.153324   49576 sync.go:124] makeTar destFile: .gitignore
+[odo] I0112 18:22:41.153330   49576 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/.gitignore, destBase: /project, destFile: .gitignore
+[odo] I0112 18:22:41.153335   49576 sync.go:150] Corrected destinations: base: /project file: .gitignore
+[odo] I0112 18:22:41.153464   49576 sync.go:106] Got abs path: /tmp/1180017212/Dockerfile
+[odo] I0112 18:22:41.153487   49576 sync.go:107] Making /tmp/1180017212 relative to /tmp/1180017212/Dockerfile
+[odo] I0112 18:22:41.153493   49576 sync.go:123] makeTar srcFile: 1180017212/Dockerfile
+[odo] I0112 18:22:41.153499   49576 sync.go:124] makeTar destFile: Dockerfile
+[odo] I0112 18:22:41.153507   49576 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/Dockerfile, destBase: /project, destFile: Dockerfile
+[odo] I0112 18:22:41.153511   49576 sync.go:150] Corrected destinations: base: /project file: Dockerfile
+[odo] I0112 18:22:41.153648   49576 sync.go:106] Got abs path: /tmp/1180017212/devfile.yaml
+[odo] I0112 18:22:41.153664   49576 sync.go:107] Making /tmp/1180017212 relative to /tmp/1180017212/devfile.yaml
+[odo] I0112 18:22:41.153671   49576 sync.go:123] makeTar srcFile: 1180017212/devfile.yaml
+[odo] I0112 18:22:41.153676   49576 sync.go:124] makeTar destFile: devfile.yaml
+[odo] I0112 18:22:41.153683   49576 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1180017212/devfile.yaml, destBase: /project, destFile: devfile.yaml
+[odo] I0112 18:22:41.153688   49576 sync.go:150] Corrected destinations: base: /project file: devfile.yaml
+[odo] 
+ âœ“  Syncing files to the component [1s]
+[odo] I0112 18:22:41.315165   49576 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl status] for pod: frontend-nmo-app-58bc644c84-z78w8 in container: runtime
+[odo] devrun                           STOPPED   
+[odo] debugrun                         STOPPED   
+[odo] 
+[odo] Executing devfile commands for component frontend-nmo
+[odo] I0112 18:22:41.741550   49576 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:22:41.741734   49576 pods.go:40] Waiting for component=frontend-nmo pod
+[odo] I0112 18:22:41.751052   49576 pods.go:70] Status of frontend-nmo-app-58bc644c84-z78w8 pod is Running
+[odo] I0112 18:22:41.751126   49576 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:14Z"}
+[odo] I0112 18:22:41.751140   49576 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:39Z"}
+[odo] I0112 18:22:41.751148   49576 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:39Z"}
+[odo] I0112 18:22:41.751156   49576 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:21:51Z"}
+[odo] I0112 18:22:41.751201   49576 pods.go:79] Container Status: {"name":"runtime","state":{"running":{"startedAt":"2022-01-12T23:22:38Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"registry.access.redhat.com/ubi8/nodejs-14:latest","imageID":"registry.access.redhat.com/ubi8/nodejs-14@sha256:4d83428d351d6e5a5c6d5704015a9f89379a758de8496a720aff96f33091c069","containerID":"cri-o://9a8c1eba23c48fb8c92f73051fd82b0a30b6eae04396fee924acb66931e57bde","started":true}
+[odo] I0112 18:22:41.751227   49576 pods.go:83] Pod frontend-nmo-app-58bc644c84-z78w8 is Running
+[odo] I0112 18:22:41.751488   49576 exec.go:27] Executing command [/bin/sh -c cd /project && npm install] for pod: frontend-nmo-app-58bc644c84-z78w8 in container: runtime
+[odo]  â€¢  Executing install command "npm install"  ...
+[odo] 
+[odo] > nodemon@2.0.15 postinstall /project/node_modules/nodemon
+[odo] > node bin/postinstall || exit 0
+[odo] 
+[odo] Love nodemon? You can now support the project via the open collective:
+[odo]  > https://opencollective.com/nodemon/donate
+[odo] 
+[odo] npm notice created a lockfile as package-lock.json. You should commit this file.
+[odo] npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@~2.3.2 (node_modules/chokidar/node_modules/fsevents):
+[odo] npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.3.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+[odo] npm WARN node-echo@0.0.1 No repository field.
+[odo] added 116 packages from 53 contributors and audited 117 packages in 8.452s
+[odo] npm WARN node-echo@0.0.1 No license field.
+[odo] 
+[odo] 
+[odo] 15 packages are looking for funding
+[odo]   run `npm fund` for details
+[odo] 
+[odo] found 0 vulnerabilities
+[odo] 
+[odo] 
+ âœ“  Executing install command "npm install" [10s]
+[odo]  â€¢  Executing run command "npm start"  ...
+[odo] I0112 18:22:51.453418   49576 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl start devrun] for pod: frontend-nmo-app-58bc644c84-z78w8 in container: runtime
+[odo] devrun: started
+[odo] 
+ âœ“  Executing run command "npm start" [1s]
+[odo] I0112 18:22:53.892750   49576 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl status] for pod: frontend-nmo-app-58bc644c84-z78w8 in container: runtime
+[odo] I0112 18:22:54.197177   49576 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo] devrun                           RUNNING   pid 93, uptime 0:00:02
+[odo] debugrun                         STOPPED   
+[odo] 
+[odo] Pushing devfile component "frontend-nmo"
+[odo]  âœ“  Changes successfully pushed to component
+Running odo with args [odo url list --context /tmp/1180017212]
+[odo] I0112 18:22:54.480389   50080 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:54.480619   50080 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:54.588310   50080 context.go:141] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:22:54.588347   50080 context.go:92] absolute devfile path: '/tmp/1180017212/devfile.yaml'
+[odo] I0112 18:22:54.588894   50080 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:54.589009   50080 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:54.589023   50080 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:54.596654   50080 schema.go:46] validated devfile schema
+[odo] I0112 18:22:54.599679   50080 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.599725   50080 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:54.637285   50080 kclient.go:231] Checking if "routes" resource is supported
+[odo] I0112 18:22:54.678280   50080 kubernetes.go:45] Listing ingresses with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-nmo
+[odo] I0112 18:22:54.678331   50080 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:54.692254   50080 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:22:54.730326   50080 routes.go:65] Listing routes with label selector: app.kubernetes.io/part-of=app,app.kubernetes.io/instance=frontend-nmo
+[odo] I0112 18:22:54.777006   50080 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo] Found the following URLs for component frontend-nmo
+[odo] NAME                  STATE      URL                                                                                                   PORT     SECURE     KIND
+[odo] frontend-nmo-8080     Pushed     http://frontend-nmo-8080-app-cmd-link-unlink-test113gah.apps.etthbwfo.etthbwfo.interop.css-qe.com     8080     false      route
+[odo] http-3000             Pushed     http://http-3000-app-cmd-link-unlink-test113gah.apps.etthbwfo.etthbwfo.interop.css-qe.com             3000     false      route
+Created dir: /tmp/1726534057
+Running odo with args [odo create backend-hdj --context /tmp/1726534057 --project cmd-link-unlink-test113gah --devfile /home/cloud-user/odo/tests/examples/source/devfiles/python/devfile-registry.yaml]
+[odo] Devfile Object Creation
+[odo]  â€¢  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/python/devfile-registry.yaml  ...
+[odo] 
+ âœ“  Creating a devfile component from devfile path: /home/cloud-user/odo/tests/examples/source/devfiles/python/devfile-registry.yaml [182612ns]
+[odo] I0112 18:22:54.986323   50106 util.go:482] path /tmp/1726534057/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986398   50106 util.go:482] path /tmp/1726534057/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986418   50106 util.go:482] path /tmp/1726534057/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986423   50106 util.go:482] path /tmp/1726534057/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986429   50106 util.go:482] path /tmp/1726534057/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986434   50106 util.go:482] path /tmp/1726534057/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986442   50106 util.go:482] path /tmp/1726534057/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986453   50106 util.go:482] path /tmp/1726534057/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986459   50106 util.go:482] path /tmp/1726534057/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986464   50106 util.go:482] path /tmp/1726534057/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:22:54.986768   50106 context.go:141] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:54.986782   50106 context.go:92] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:54.987224   50106 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:54.987303   50106 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:54.987315   50106 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:54.986330   50106 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:54.993718   50106 schema.go:46] validated devfile schema
+[odo] I0112 18:22:54.997680   50106 context.go:141] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:54.997692   50106 context.go:92] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:54.998091   50106 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:54.998160   50106 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:54.998169   50106 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] Validation
+[odo]  â€¢  Validating if devfile name is correct  ...
+[odo] 
+ âœ“  Validating if devfile name is correct [23216ns]
+[odo]  â€¢  Validating the devfile for odo  ...
+[odo] 
+ âœ“  Validating the devfile for odo [14ms]
+[odo] I0112 18:22:55.011642   50106 schema.go:46] validated devfile schema
+[odo] I0112 18:22:55.011932   50106 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:55.011978   50106 context.go:141] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.011985   50106 context.go:92] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.012629   50106 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:55.012763   50106 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:55.012774   50106 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo]  â€¢  Updating the devfile with component name "backend-hdj"  ...
+[odo] I0112 18:22:55.037935   50106 schema.go:46] validated devfile schema
+[odo] 
+ âœ“  Updating the devfile with component name "backend-hdj" [17ms]
+[odo] 
+[odo] Please use `odo push` command to create the component with source deployed
+[odo] I0112 18:22:55.055541   50106 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:22:55.056044   50106 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo url create --port 8080 --context /tmp/1726534057]
+[odo] I0112 18:22:55.204592   50127 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:55.204803   50127 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:55.283134   50127 context.go:141] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.283154   50127 context.go:92] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.283575   50127 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:55.283667   50127 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:55.283684   50127 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:55.295506   50127 schema.go:46] validated devfile schema
+[odo] I0112 18:22:55.298142   50127 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:55.298187   50127 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:55.332479   50127 kclient.go:231] Checking if "routes" resource is supported
+[odo]  âœ“  URL backend-hdj-8080 created for component: backend-hdj
+[odo] 
+[odo] To apply the URL configuration changes, please use `odo push`
+[odo] I0112 18:22:55.351860   50127 writer.go:30] devfile yaml created at: 'devfile.yaml'
+[odo] I0112 18:22:55.352118   50127 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo push --context /tmp/1726534057]
+[odo] I0112 18:22:55.532160   50148 context.go:141] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.532249   50148 context.go:92] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.532249   50148 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:22:55.532369   50148 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:22:55.532695   50148 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:55.532777   50148 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:55.532788   50148 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:55.541287   50148 schema.go:46] validated devfile schema
+[odo] I0112 18:22:55.544417   50148 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:55.544465   50148 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:22:55.633467   50148 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:22:55.647461   50148 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:22:55.684335   50148 context.go:141] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.684365   50148 context.go:92] absolute devfile path: '/tmp/1726534057/devfile.yaml'
+[odo] I0112 18:22:55.684802   50148 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:22:55.684907   50148 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:22:55.684920   50148 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:22:55.712138   50148 schema.go:46] validated devfile schema
+[odo] I0112 18:22:55.712443   50148 validate.go:45] Successfully validated devfile sections
+[odo] 
+[odo] Validation
+[odo]  â€¢  Validating the devfile  ...
+[odo] I0112 18:22:55.781094   50148 command.go:172] Build command: pip-install-requirements
+[odo] I0112 18:22:55.781113   50148 command.go:179] Run command: run-app
+[odo] 
+ âœ“  Validating the devfile [84786ns]
+[odo] 
+[odo] Creating Services for component backend-hdj
+[odo] I0112 18:22:55.784571   50148 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:22:55.806257   50148 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:22:55.899522   50148 service.go:87] Getting list of services
+[odo] I0112 18:22:55.899561   50148 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:22:55.946812   50148 service.go:105] Getting services started from operator: redis-operator.v0.8.0
+[odo] I0112 18:22:55.946865   50148 service.go:209] Getting instances of: redisclusters.redis.redis.opstreelabs.in
+[odo] I0112 18:22:55.974799   50148 service.go:209] Getting instances of: redis.redis.redis.opstreelabs.in
+[odo] I0112 18:22:56.010666   50148 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo]  âœ“  Services are in sync with the cluster, no changes are required
+[odo] 
+[odo] Creating Kubernetes resources for component backend-hdj
+[odo] I0112 18:22:56.076786   50148 utils.go:224] Updating container py-web entrypoint with supervisord
+[odo] I0112 18:22:56.076824   50148 utils.go:108] Updating container py-web with supervisord volume mounts
+[odo] I0112 18:22:56.076833   50148 utils.go:118] Updating container py-web env with run command
+[odo] I0112 18:22:56.076841   50148 utils.go:135] Updating container py-web env with run command's workdir
+[odo] I0112 18:22:56.076850   50148 utils.go:171] Updating container py-web env with debug command
+[odo] I0112 18:22:56.076858   50148 utils.go:188] Updating container py-web env with debug command's workdir
+[odo] I0112 18:22:56.076865   50148 utils.go:197] Updating container py-web env with debug command's debugPort
+[odo] I0112 18:22:56.087862   50148 adapter.go:571] Creating deployment backend-hdj-app
+[odo] I0112 18:22:56.087910   50148 adapter.go:572] The component name is backend-hdj
+[odo] I0112 18:22:56.092552   50148 kclient.go:280] Kubernetes version is "v1.23.0+20a057a"
+[odo] I0112 18:22:56.092595   50148 kclient.go:292] Cluster has support for SSA: true
+[odo] I0112 18:22:56.224705   50148 adapter.go:599] Successfully created component backend-hdj
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:22:56.387516   50148 adapter.go:607] Successfully created Service for component backend-hdj
+[odo] I0112 18:22:56.387550   50148 deployments.go:152] Waiting for backend-hdj-app deployment rollout
+[odo] I0112 18:22:56.416388   50148 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:55Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"backend-hdj-app-54994dcb4f\""}
+[odo] I0112 18:22:56.416425   50148 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:56.484161   50148 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:55Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"backend-hdj-app-54994dcb4f\""}
+[odo] I0112 18:22:56.484238   50148 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:22:55Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:22:56.484254   50148 deployments.go:192] Waiting for deployment "backend-hdj-app" rollout to finish: 0 out of 1 new replicas have been updated...
+[odo] I0112 18:22:56.484272   50148 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:56.907431   50148 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:22:55Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:22:56.907477   50148 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:22:56Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"ReplicaSetUpdated","message":"ReplicaSet \"backend-hdj-app-54994dcb4f\" is progressing."}
+[odo] I0112 18:22:56.907491   50148 deployments.go:196] Waiting for deployment "backend-hdj-app" rollout to finish: 0 of 1 updated replicas are available...
+[odo] I0112 18:22:56.907509   50148 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:22:58.677102   50148 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:23:07.993847   50148 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:23:07Z","lastTransitionTime":"2022-01-12T23:23:07Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:23:07.993907   50148 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:23:07Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"backend-hdj-app-54994dcb4f\" has successfully progressed."}
+[odo] 
+ âœ“  Waiting for component to start [12s]
+[odo] I0112 18:23:07.994472   50148 deployments.go:199] Deployment "backend-hdj-app" successfully rolled out
+[odo] I0112 18:23:07.994517   50148 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:23:07.994627   50148 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:23:07.994851   50148 pods.go:40] Waiting for component=backend-hdj pod
+[odo] I0112 18:23:08.021283   50148 pods.go:70] Status of backend-hdj-app-54994dcb4f-chqf7 pod is Running
+[odo] I0112 18:23:08.021446   50148 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:59Z"}
+[odo] I0112 18:23:08.021460   50148 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:08.021472   50148 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:08.021480   50148 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:55Z"}
+[odo] I0112 18:23:08.021613   50148 pods.go:79] Container Status: {"name":"py-web","state":{"running":{"startedAt":"2022-01-12T23:23:06Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"quay.io/eclipse/che-python-3.7:nightly","imageID":"quay.io/eclipse/che-python-3.7@sha256:35664a8d2aef59b5472516a297932ba996a30784af0f9b45b889fe9ac4ad83a5","containerID":"cri-o://aa22e0f2ad79d76da32486a8bfc801e6e7aadb63e35fb5b950174034fcd57ef9","started":true}
+[odo] I0112 18:23:08.021622   50148 pods.go:83] Pod backend-hdj-app-54994dcb4f-chqf7 is Running
+[odo] I0112 18:23:08.080525   50148 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:23:08.128766   50148 kclient.go:231] Checking if "deployments" resource is supported
+[odo]  âœ“  Links are in sync with the cluster, no changes are required
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:23:08.136828   50148 deployments.go:152] Waiting for backend-hdj-app deployment rollout
+[odo] I0112 18:23:08.161762   50148 deployments.go:185] Deployment Condition: {"type":"Available","status":"True","lastUpdateTime":"2022-01-12T23:23:07Z","lastTransitionTime":"2022-01-12T23:23:07Z","reason":"MinimumReplicasAvailable","message":"Deployment has minimum availability."}
+[odo] I0112 18:23:08.161796   50148 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:23:07Z","lastTransitionTime":"2022-01-12T23:22:55Z","reason":"NewReplicaSetAvailable","message":"ReplicaSet \"backend-hdj-app-54994dcb4f\" has successfully progressed."}
+[odo] I0112 18:23:08.161828   50148 deployments.go:199] Deployment "backend-hdj-app" successfully rolled out
+[odo] I0112 18:23:08.161838   50148 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] 
+ âœ“  Waiting for component to start [24ms]
+[odo] I0112 18:23:08.161888   50148 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:23:08.162064   50148 pods.go:40] Waiting for component=backend-hdj pod
+[odo] I0112 18:23:08.177811   50148 pods.go:70] Status of backend-hdj-app-54994dcb4f-chqf7 pod is Running
+[odo] I0112 18:23:08.177860   50148 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:59Z"}
+[odo] I0112 18:23:08.177870   50148 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:08.177876   50148 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:08.177883   50148 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:55Z"}
+[odo] I0112 18:23:08.177969   50148 pods.go:79] Container Status: {"name":"py-web","state":{"running":{"startedAt":"2022-01-12T23:23:06Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"quay.io/eclipse/che-python-3.7:nightly","imageID":"quay.io/eclipse/che-python-3.7@sha256:35664a8d2aef59b5472516a297932ba996a30784af0f9b45b889fe9ac4ad83a5","containerID":"cri-o://aa22e0f2ad79d76da32486a8bfc801e6e7aadb63e35fb5b950174034fcd57ef9","started":true}
+[odo] I0112 18:23:08.177982   50148 pods.go:83] Pod backend-hdj-app-54994dcb4f-chqf7 is Running
+[odo] I0112 18:23:08.178056   50148 kclient.go:231] Checking if "routes" resource is supported
+[odo] 
+[odo] Applying URL changes
+[odo] I0112 18:23:08.200752   50148 kubernetes.go:45] Listing ingresses with label selector: app.kubernetes.io/instance=backend-hdj,app.kubernetes.io/part-of=app
+[odo] I0112 18:23:08.200768   50148 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:23:08.216301   50148 kclient.go:231] Checking if "ingresses" resource is supported
+[odo] I0112 18:23:08.262837   50148 routes.go:65] Listing routes with label selector: app.kubernetes.io/instance=backend-hdj,app.kubernetes.io/part-of=app
+[odo]  âœ“  URL web: http://web-app-cmd-link-unlink-test113gah.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo] I0112 18:23:08.500787   50148 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057, destBase: ., destFile: .
+[odo] I0112 18:23:08.500797   50148 file_indexer.go:421] Corrected destinations: base: . file: .
+[odo] I0112 18:23:08.500888   50148 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/.gitignore, destBase: ., destFile: .gitignore
+[odo] I0112 18:23:08.500893   50148 file_indexer.go:421] Corrected destinations: base: . file: .gitignore
+[odo] I0112 18:23:08.500917   50148 file_indexer.go:466] file added: /tmp/1726534057/.gitignore
+[odo] I0112 18:23:08.500926   50148 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/.odo, destBase: ., destFile: .odo
+[odo] I0112 18:23:08.500929   50148 file_indexer.go:421] Corrected destinations: base: . file: .odo
+[odo] I0112 18:23:08.500967   50148 file_indexer.go:466] file added: /tmp/1726534057/.odo
+[odo] I0112 18:23:08.500972   50148 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/devfile.yaml, destBase: ., destFile: devfile.yaml
+[odo] I0112 18:23:08.500976   50148 file_indexer.go:421] Corrected destinations: base: . file: devfile.yaml
+[odo] I0112 18:23:08.500998   50148 file_indexer.go:466] file added: /tmp/1726534057/devfile.yaml
+[odo] I0112 18:23:08.501006   50148 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/requirements.txt, destBase: ., destFile: requirements.txt
+[odo] I0112 18:23:08.501010   50148 file_indexer.go:421] Corrected destinations: base: . file: requirements.txt
+[odo] I0112 18:23:08.501032   50148 file_indexer.go:466] file added: /tmp/1726534057/requirements.txt
+[odo] I0112 18:23:08.501040   50148 file_indexer.go:415] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/wsgi.py, destBase: ., destFile: wsgi.py
+[odo] I0112 18:23:08.501044   50148 file_indexer.go:421] Corrected destinations: base: . file: wsgi.py
+[odo] I0112 18:23:08.501066   50148 file_indexer.go:466] file added: /tmp/1726534057/wsgi.py
+[odo] I0112 18:23:08.501148   50148 adapter.go:144] List of files to be deleted: +[]
+[odo] I0112 18:23:08.501156   50148 adapter.go:146] List of files changed: +[/tmp/1726534057/.gitignore /tmp/1726534057/devfile.yaml /tmp/1726534057/requirements.txt /tmp/1726534057/wsgi.py]
+[odo] I0112 18:23:08.501170   50148 adapter.go:180] Push: componentName: backend-hdj, path: /tmp/1726534057, files: [/tmp/1726534057/.gitignore /tmp/1726534057/devfile.yaml /tmp/1726534057/requirements.txt /tmp/1726534057/wsgi.py], delFiles: [*], isForcePush: true
+[odo] I0112 18:23:08.501236   50148 adapter.go:304] remote files marked for deletion are [/projects/*]
+[odo] I0112 18:23:08.501251   50148 exec.go:27] Executing command [rm -rf /projects/*] for pod: backend-hdj-app-54994dcb4f-chqf7 in container: py-web
+[odo]  âœ“  URL backend-hdj-8080: http://backend-hdj-8080-app-cmd-link-unlink-test113gah.apps.etthbwfo.etthbwfo.interop.css-qe.com/ created
+[odo] 
+[odo] Syncing to component backend-hdj
+[odo]  â€¢  Checking files for pushing  ...
+[odo] 
+ âœ“  Checking files for pushing [432693ns]
+[odo]  â€¢  Syncing files to the component  ...
+[odo] I0112 18:23:08.894602   50148 adapter.go:225] Copying files /tmp/1726534057/.gitignore /tmp/1726534057/devfile.yaml /tmp/1726534057/requirements.txt /tmp/1726534057/wsgi.py to pod
+[odo] I0112 18:23:08.894677   50148 sync.go:35] CopyFile arguments: localPath /tmp/1726534057, dest /projects/1726534057, targetPath /projects, copyFiles [/tmp/1726534057/.gitignore /tmp/1726534057/devfile.yaml /tmp/1726534057/requirements.txt /tmp/1726534057/wsgi.py], globalExps [/tmp/1726534057/.git /tmp/1726534057/tmp/1726534057/.odo/env /tmp/1726534057/.odo/odo-file-index.json]
+[odo] I0112 18:23:08.894781   50148 pods.go:188] Executing command tar xf - -C /projects
+[odo] I0112 18:23:08.895056   50148 sync.go:76] makeTar arguments: srcPath: /tmp/1726534057, destPath: /projects/1726534057, files: [/tmp/1726534057/.gitignore /tmp/1726534057/devfile.yaml /tmp/1726534057/requirements.txt /tmp/1726534057/wsgi.py]
+[odo] I0112 18:23:08.895198   50148 sync.go:106] Got abs path: /tmp/1726534057/.gitignore
+[odo] I0112 18:23:08.895228   50148 sync.go:107] Making /tmp/1726534057 relative to /tmp/1726534057/.gitignore
+[odo] I0112 18:23:08.895238   50148 sync.go:123] makeTar srcFile: 1726534057/.gitignore
+[odo] I0112 18:23:08.895243   50148 sync.go:124] makeTar destFile: .gitignore
+[odo] I0112 18:23:08.895250   50148 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/.gitignore, destBase: /projects, destFile: .gitignore
+[odo] I0112 18:23:08.895254   50148 sync.go:150] Corrected destinations: base: /projects file: .gitignore
+[odo] I0112 18:23:09.033946   50148 sync.go:106] Got abs path: /tmp/1726534057/devfile.yaml
+[odo] I0112 18:23:09.033982   50148 sync.go:107] Making /tmp/1726534057 relative to /tmp/1726534057/devfile.yaml
+[odo] I0112 18:23:09.033994   50148 sync.go:123] makeTar srcFile: 1726534057/devfile.yaml
+[odo] I0112 18:23:09.034001   50148 sync.go:124] makeTar destFile: devfile.yaml
+[odo] I0112 18:23:09.034008   50148 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/devfile.yaml, destBase: /projects, destFile: devfile.yaml
+[odo] I0112 18:23:09.034015   50148 sync.go:150] Corrected destinations: base: /projects file: devfile.yaml
+[odo] I0112 18:23:09.034188   50148 sync.go:106] Got abs path: /tmp/1726534057/requirements.txt
+[odo] I0112 18:23:09.034198   50148 sync.go:107] Making /tmp/1726534057 relative to /tmp/1726534057/requirements.txt
+[odo] I0112 18:23:09.034234   50148 sync.go:123] makeTar srcFile: 1726534057/requirements.txt
+[odo] I0112 18:23:09.034240   50148 sync.go:124] makeTar destFile: requirements.txt
+[odo] I0112 18:23:09.034244   50148 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/requirements.txt, destBase: /projects, destFile: requirements.txt
+[odo] I0112 18:23:09.034249   50148 sync.go:150] Corrected destinations: base: /projects file: requirements.txt
+[odo] I0112 18:23:09.034378   50148 sync.go:106] Got abs path: /tmp/1726534057/wsgi.py
+[odo] I0112 18:23:09.034394   50148 sync.go:107] Making /tmp/1726534057 relative to /tmp/1726534057/wsgi.py
+[odo] I0112 18:23:09.034400   50148 sync.go:123] makeTar srcFile: 1726534057/wsgi.py
+[odo] I0112 18:23:09.034406   50148 sync.go:124] makeTar destFile: wsgi.py
+[odo] I0112 18:23:09.034410   50148 sync.go:144] recursiveTar arguments: srcBase: /tmp, srcFile: 1726534057/wsgi.py, destBase: /projects, destFile: wsgi.py
+[odo] I0112 18:23:09.034418   50148 sync.go:150] Corrected destinations: base: /projects file: wsgi.py
+[odo] 
+ âœ“  Syncing files to the component [642ms]
+[odo] I0112 18:23:09.144662   50148 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl status] for pod: backend-hdj-app-54994dcb4f-chqf7 in container: py-web
+[odo] debugrun                         STOPPED   
+[odo] devrun                           STOPPED   
+[odo] 
+[odo] Executing devfile commands for component backend-hdj
+[odo] I0112 18:23:09.421766   50148 preference.go:210] The path for preference file is /tmp/3854991443/preference.yaml
+[odo] I0112 18:23:09.422101   50148 pods.go:40] Waiting for component=backend-hdj pod
+[odo] I0112 18:23:09.428034   50148 pods.go:70] Status of backend-hdj-app-54994dcb4f-chqf7 pod is Running
+[odo] I0112 18:23:09.428121   50148 pods.go:74] Pod Conditions: {"type":"Initialized","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:59Z"}
+[odo] I0112 18:23:09.428133   50148 pods.go:74] Pod Conditions: {"type":"Ready","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:09.428141   50148 pods.go:74] Pod Conditions: {"type":"ContainersReady","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:23:07Z"}
+[odo] I0112 18:23:09.428151   50148 pods.go:74] Pod Conditions: {"type":"PodScheduled","status":"True","lastProbeTime":null,"lastTransitionTime":"2022-01-12T23:22:55Z"}
+[odo] I0112 18:23:09.428228   50148 pods.go:79] Container Status: {"name":"py-web","state":{"running":{"startedAt":"2022-01-12T23:23:06Z"}},"lastState":{},"ready":true,"restartCount":0,"image":"quay.io/eclipse/che-python-3.7:nightly","imageID":"quay.io/eclipse/che-python-3.7@sha256:35664a8d2aef59b5472516a297932ba996a30784af0f9b45b889fe9ac4ad83a5","containerID":"cri-o://aa22e0f2ad79d76da32486a8bfc801e6e7aadb63e35fb5b950174034fcd57ef9","started":true}
+[odo] I0112 18:23:09.428236   50148 pods.go:83] Pod backend-hdj-app-54994dcb4f-chqf7 is Running
+[odo] I0112 18:23:09.428424   50148 exec.go:27] Executing command [/bin/sh -c pip install --user -r requirements.txt] for pod: backend-hdj-app-54994dcb4f-chqf7 in container: py-web
+[odo]  â€¢  Executing pip-install-requirements command "pip install --user -r requirements.txt"  ...
+[odo] Collecting gunicorn
+[odo]   Downloading https://files.pythonhosted.org/packages/e4/dd/5b190393e6066286773a67dfcc2f9492058e9b57c4867a95f1ba5caf0a83/gunicorn-20.1.0-py3-none-any.whl (79kB)
+[odo] Collecting numpy
+[odo]   Downloading https://files.pythonhosted.org/packages/50/46/292cff79f5b30151b027400efdb3f740ea03271b600751b6696cf550c10d/numpy-1.21.5-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7MB)
+[odo] Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.7/site-packages (from gunicorn->-r requirements.txt (line 1)) (41.4.0)
+[odo] Installing collected packages: gunicorn, numpy
+[odo]   WARNING: The script gunicorn is installed in '/home/user/.local/bin' which is not on PATH.
+[odo]   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+[odo]   WARNING: The scripts f2py, f2py3 and f2py3.7 are installed in '/home/user/.local/bin' which is not on PATH.
+[odo]   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+[odo] Successfully installed gunicorn-20.1.0 numpy-1.21.5
+[odo] WARNING: You are using pip version 19.3; however, version 21.3.1 is available.
+[odo] You should consider upgrading via the 'pip install --upgrade pip' command.
+[odo] I0112 18:23:18.414469   50148 exec.go:27] Executing command [/opt/odo/bin/supervisord ctl start devrun] for pod: backend-hdj-app-54994dcb4f-chqf7 in container: py-web
+[odo] 
+ âœ“  Executing pip-install-requirements command "pip install --user -r requirements.txt" [9s]
+[odo]  â€¢  Executing run-app command "python app.py"  ...
+[odo]  âš   Unable to convert object to event
+[odo]  âœ—  Executing run-app command "python app.py" [13s]
+[odo] I0112 18:23:31.441601   50148 exec.go:43] ExecuteCommand returned an an err: error while streaming command: Internal error occurred: admission plugin "security.openshift.io/SCCExecRestrictions" failed to complete validation in 13s. for command '[/opt/odo/bin/supervisord ctl start devrun]'. output: 
+[odo]  âœ—  Failed to start component with name "backend-hdj". Error: Failed to create the component: command execution failed: unable to execute the run command: unable to exec command [/opt/odo/bin/supervisord ctl start devrun]: 
+[odo] : error while streaming command: Internal error occurred: admission plugin "security.openshift.io/SCCExecRestrictions" failed to complete validation in 13s
+Deleting dir: /tmp/1180017212
+Deleting dir: /tmp/1726534057
+Deleting project: cmd-link-unlink-test113gah
+Running odo with args [odo project delete cmd-link-unlink-test113gah -f]
+[odo] I0112 18:23:31.625306   50220 util.go:482] path /home/cloud-user/odo/tests/integration/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:23:31.625437   50220 util.go:482] path /home/cloud-user/odo/tests/integration/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:23:31.696819   50220 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:23:31.783297   50220 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:23:31.923494   50220 kclient.go:231] Checking if "projects" resource is supported
+[odo]  âœ—  Internal error occurred: etcdserver: request timed out
+
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+
+Summarizing 2 Failures:
+
+[Fail] odo link and unlink command tests when two components are deployed [BeforeEach] when a link is created between the two components when the link is pushed when unlinking the two components should find the link in odo describe 
+/home/cloud-user/odo/tests/helper/helper_cmd_wrapper.go:100
+
+[Fail] odo link and unlink command tests when two components are deployed [BeforeEach] when a link is created between the two components when the link is pushed should find the linked environment variable 
+/home/cloud-user/odo/tests/helper/helper_cmd_wrapper.go:100
+
+Ran 46 of 46 Specs in 552.069 seconds
+FAIL! -- 44 Passed | 2 Failed | 0 Pending | 0 Skipped
+
+
+Ginkgo ran 1 suite in 9m26.434161804s
+Test Suite Failed
+GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo  -randomizeAllSpecs -slowSpecThreshold=120 -timeout 14400s -nodes=4 tests/integration/devfile/
+Running Suite: Devfile Suite
+============================
+Random Seed: 1642030259 - Will randomize all specs
+Will run 235 specs
+
+Running in parallel across 4 nodes
+
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+P [PENDING]
+odo devfile delete command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:17
+  when a component is created
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:41
+    when the component is pushed
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:50
+      deleting a component from other component directory
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:62
+        when the second component is created
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:76
+          when the second component is pushed
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:81
+            should delete with the component name
+            /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:105
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:164.855 seconds]
+odo devfile delete command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:17
+  when a component is created
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:41
+    when the component has resources attached to it
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:131
+      when the component is pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:143
+        should delete the component and its owned resources
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_delete_test.go:147
+------------------------------
+â€¢
+------------------------------
+â€¢ [SLOW TEST:172.108 seconds]
+odo devfile push command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:18
+  when creating a nodejs component
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:35
+    when doing odo push with devfile contain volume
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:338
+      should create pvc and reuse if it shares the same devfile volume name
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:346
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:132.206 seconds]
+odo devfile log command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_log_test.go:12
+  Verify odo log for devfile works
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_log_test.go:27
+    should log run command output and fail for debug command
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_log_test.go:29
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when devfile has missing metadata [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:103
+    when projectType is missing
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:121
+      should show the language for 'Type' in odo describe
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:127
+
+      Plain Kubernetes scenario only, skipping
+
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢
+------------------------------
+â€¢ Failure in Spec Setup (BeforeEach) [304.182 seconds]
+odo list with devfile
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_list_test.go:16
+  devfile has missing metadata
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_list_test.go:115
+    when projectType and language is missing
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_list_test.go:152
+      when the component is pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_list_test.go:160
+        should show 'Not available' for 'Type' in odo list [BeforeEach]
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_list_test.go:164
+
+        No future change is possible.  Bailing out early after 301.236s.
+        Running odo with args [odo push --context /tmp/1110141202]
+        Expected
+            <int>: 1
+        to match exit code:
+            <int>: 0
+
+        /home/cloud-user/odo/tests/helper/helper_cmd_wrapper.go:100
+------------------------------
+â€¢
+------------------------------
+Created dir: /tmp/1110141202
+Setting KUBECONFIG=/tmp/1110141202/config
+Creating a new project: cmd-devfile-list-test164mje
+Running odo with args [odo project create cmd-devfile-list-test164mje -w -v4]
+[odo] I0112 18:31:43.838616   57326 preference.go:210] The path for preference file is /home/cloud-user/.odo/preference.yaml
+[odo] I0112 18:31:43.838753   57326 runnable.go:52] Skipping telemetry question because there is no terminal (tty)
+[odo] I0112 18:31:43.838766   57326 segment.go:246] Checking telemetry enable status
+[odo] I0112 18:31:43.838772   57326 segment.go:259] Sending telemetry disabled by ODO_DISABLE_TELEMETRY=true
+[odo] I0112 18:31:43.838833   57326 util.go:482] path /home/cloud-user/odo/tests/integration/devfile/devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:31:43.838829   57326 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:31:43.838864   57326 util.go:482] path /home/cloud-user/odo/tests/integration/devfile/.devfile.yaml doesn't exist, skipping it
+[odo] I0112 18:31:43.839079   57326 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:31:43.901684   57326 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo]  â€¢  Waiting for project to come up  ...
+[odo] I0112 18:31:43.914245   57326 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:31:45.582112   57326 projects.go:192] Status of creation of project cmd-devfile-list-test164mje is Active
+[odo] I0112 18:31:45.582161   57326 projects.go:197] Project cmd-devfile-list-test164mje now exists
+[odo] I0112 18:31:45.600564   57326 namespace.go:186] Status of creation of service account &ServiceAccount{ObjectMeta:{default  cmd-devfile-list-test164mje  008e253f-2834-465c-8da9-ec1084fdda0b 47009 0 2022-01-12 18:31:43 -0500 EST <nil> <nil> map[] map[] [] []  []},Secrets:[]ObjectReference{ObjectReference{Kind:,Namespace:,Name:default-token-lt262,UID:,APIVersion:,ResourceVersion:,FieldPath:,},ObjectReference{Kind:,Namespace:,Name:default-dockercfg-mbqq7,UID:,APIVersion:,ResourceVersion:,FieldPath:,},},ImagePullSecrets:[]LocalObjectReference{LocalObjectReference{Name:default-dockercfg-mbqq7,},},AutomountServiceAccountToken:nil,} is ready
+[odo] 
+ âœ“  Waiting for project to come up [2s]
+[odo]  âœ“  Project "cmd-devfile-list-test164mje" is ready for use
+[odo] I0112 18:31:45.612910   57326 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo]  âœ“  New project created and now using project: cmd-devfile-list-test164mje
+Running oc with args [oc create configmap config-map-for-cleanup --from-literal type=testing --from-literal team=odo -n cmd-devfile-list-test164mje]
+[oc] configmap/config-map-for-cleanup created
+Current working dir: /home/cloud-user/odo/tests/integration/devfile
+Running odo with args [odo registry update DefaultDevfileRegistry https://registry.stage.devfile.io -f]
+[odo] I0112 18:31:45.960272   57345 preference.go:210] The path for preference file is /tmp/1110141202/preference.yaml
+[odo] I0112 18:31:45.960390   57345 preference.go:210] The path for preference file is /tmp/1110141202/preference.yaml
+[odo] Successfully updated registry
+[odo] I0112 18:31:45.960613   57345 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:31:45.960726   57345 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:31:45.960793   57345 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Setting current dir to: /tmp/1110141202
+Running odo with args [odo create --context /tmp/1110141202]
+[odo] I0112 18:31:46.096707   57356 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] Devfile Object Creation
+[odo]  â€¢  odo will create a devfile component from the existing devfile: /tmp/1110141202/devfile.yaml  ...
+[odo] I0112 18:31:46.096734   57356 util.go:482] path /tmp/1110141202/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:31:46.100764   57356 util.go:482] path /tmp/1110141202/.odo/env/env.yaml doesn't exist, skipping it
+[odo] I0112 18:31:46.100963   57356 context.go:141] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.100974   57356 context.go:92] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.113689   57356 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:31:46.113848   57356 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:31:46.113871   57356 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:31:46.144260   57356 schema.go:46] validated devfile schema
+[odo] I0112 18:31:46.147861   57356 context.go:141] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.147889   57356 context.go:92] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.148432   57356 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:31:46.148514   57356 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:31:46.148525   57356 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] 
+ âœ“  odo will create a devfile component from the existing devfile: /tmp/1110141202/devfile.yaml [46ms]
+[odo] Validation
+[odo]  â€¢  Validating if devfile name is correct  ...
+[odo] 
+ âœ“  Validating if devfile name is correct [22255ns]
+[odo]  â€¢  Validating the devfile for odo  ...
+[odo] I0112 18:31:46.165996   57356 schema.go:46] validated devfile schema
+[odo] I0112 18:31:46.166466   57356 validate.go:45] Successfully validated devfile sections
+[odo] 
+ âœ“  Validating the devfile for odo [18ms]
+[odo] I0112 18:31:46.166538   57356 context.go:141] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.166546   57356 context.go:92] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.167068   57356 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:31:46.167366   57356 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:31:46.167386   57356 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:31:46.176651   57356 schema.go:46] validated devfile schema
+[odo] 
+[odo] Please use `odo push` command to create the component with source deployed
+[odo] I0112 18:31:46.177781   57356 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+Running odo with args [odo push --context /tmp/1110141202]
+[odo] I0112 18:31:46.410593   57367 context.go:141] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.410692   57367 context.go:92] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.411280   57367 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:31:46.411382   57367 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:31:46.411393   57367 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:31:46.417712   57367 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:31:46.428622   57367 schema.go:46] validated devfile schema
+[odo] I0112 18:31:46.417857   57367 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:31:46.463247   57367 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:31:46.463301   57367 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:31:46.493159   57367 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:31:46.530749   57367 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:31:46.637700   57367 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:31:46.647997   57367 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:31:46.653787   57367 context.go:141] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.653837   57367 context.go:92] absolute devfile path: '/tmp/1110141202/devfile.yaml'
+[odo] I0112 18:31:46.654515   57367 content.go:33] converted devfile YAML to JSON
+[odo] I0112 18:31:46.654608   57367 apiVersion.go:45] devfile schemaVersion: '2.0.0'
+[odo] I0112 18:31:46.654625   57367 helper.go:41] devfile apiVersion '2.0.0' is supported
+[odo] I0112 18:31:46.660574   57367 schema.go:46] validated devfile schema
+[odo] I0112 18:31:46.660807   57367 validate.go:45] Successfully validated devfile sections
+[odo] I0112 18:31:46.773119   57367 command.go:172] Build command: defaultbuild
+[odo] I0112 18:31:46.773131   57367 command.go:179] Run command: defaultrun
+[odo] 
+[odo] Validation
+[odo]  â€¢  Validating the devfile  ...
+[odo] 
+ âœ“  Validating the devfile [68282ns]
+[odo] 
+[odo] Creating Services for component myspringbootproject
+[odo] I0112 18:31:46.783062   57367 kclient.go:231] Checking if "clusterserviceversions" resource is supported
+[odo] I0112 18:31:46.792734   57367 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:31:46.838411   57367 service.go:87] Getting list of services
+[odo] I0112 18:31:46.838458   57367 operators.go:45] Fetching list of operators installed in cluster
+[odo] I0112 18:31:46.909833   57367 service.go:105] Getting services started from operator: redis-operator.v0.8.0
+[odo] I0112 18:31:46.909871   57367 service.go:209] Getting instances of: redisclusters.redis.redis.opstreelabs.in
+[odo] I0112 18:31:46.946585   57367 service.go:209] Getting instances of: redis.redis.redis.opstreelabs.in
+[odo] I0112 18:31:46.961833   57367 preference.go:210] The path for preference file is /tmp/1110141202/preference.yaml
+[odo]  âœ“  Services are in sync with the cluster, no changes are required
+[odo] 
+[odo] Creating Kubernetes resources for component myspringbootproject
+[odo] I0112 18:31:47.013038   57367 kubernetes.go:67] Creating a PVC with name springbootpvc-myspringbootproject-app and labels map[app:app app.kubernetes.io/instance:myspringbootproject app.kubernetes.io/managed-by:odo app.kubernetes.io/managed-by-version:v2.4.2 app.kubernetes.io/part-of:app app.kubernetes.io/storage-name:springbootpvc component:myspringbootproject storage-name:springbootpvc]
+[odo]  âœ“  Added storage springbootpvc to myspringbootproject
+[odo] I0112 18:31:47.048493   57367 command.go:93] the command group of kind "debug" is not found in the devfile
+[odo] I0112 18:31:47.048567   57367 utils.go:224] Updating container runtime entrypoint with supervisord
+[odo] I0112 18:31:47.048577   57367 utils.go:108] Updating container runtime with supervisord volume mounts
+[odo] I0112 18:31:47.048585   57367 utils.go:118] Updating container runtime env with run command
+[odo] I0112 18:31:47.048593   57367 utils.go:135] Updating container runtime env with run command's workdir
+[odo] I0112 18:31:47.074728   57367 adapter.go:571] Creating deployment myspringbootproject-app
+[odo] I0112 18:31:47.074767   57367 adapter.go:572] The component name is myspringbootproject
+[odo] I0112 18:31:47.079168   57367 kclient.go:280] Kubernetes version is "v1.23.0+20a057a"
+[odo] I0112 18:31:47.079229   57367 kclient.go:292] Cluster has support for SSA: true
+[odo] I0112 18:31:47.183013   57367 adapter.go:599] Successfully created component myspringbootproject
+[odo]  â€¢  Waiting for component to start  ...
+[odo] I0112 18:31:47.412957   57367 adapter.go:607] Successfully created Service for component myspringbootproject
+[odo] I0112 18:31:47.412999   57367 deployments.go:152] Waiting for myspringbootproject-app deployment rollout
+[odo] I0112 18:31:47.431583   57367 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:31:47Z","lastTransitionTime":"2022-01-12T23:31:47Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"myspringbootproject-app-7d46d84f49\""}
+[odo] I0112 18:31:47.431615   57367 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:31:47.489575   57367 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:31:47Z","lastTransitionTime":"2022-01-12T23:31:47Z","reason":"NewReplicaSetCreated","message":"Created new replica set \"myspringbootproject-app-7d46d84f49\""}
+[odo] I0112 18:31:47.489626   57367 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:31:47Z","lastTransitionTime":"2022-01-12T23:31:47Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:31:47.489640   57367 deployments.go:192] Waiting for deployment "myspringbootproject-app" rollout to finish: 0 out of 1 new replicas have been updated...
+[odo] I0112 18:31:47.489652   57367 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] I0112 18:31:48.121839   57367 deployments.go:185] Deployment Condition: {"type":"Available","status":"False","lastUpdateTime":"2022-01-12T23:31:47Z","lastTransitionTime":"2022-01-12T23:31:47Z","reason":"MinimumReplicasUnavailable","message":"Deployment does not have minimum availability."}
+[odo] I0112 18:31:48.121876   57367 deployments.go:185] Deployment Condition: {"type":"Progressing","status":"True","lastUpdateTime":"2022-01-12T23:31:48Z","lastTransitionTime":"2022-01-12T23:31:47Z","reason":"ReplicaSetUpdated","message":"ReplicaSet \"myspringbootproject-app-7d46d84f49\" is progressing."}
+[odo] I0112 18:31:48.121903   57367 deployments.go:196] Waiting for deployment "myspringbootproject-app" rollout to finish: 0 of 1 updated replicas are available...
+[odo] I0112 18:31:48.121915   57367 deployments.go:203] Waiting for deployment spec update to be observed...
+[odo] 
+I0112 18:34:09.871030   57367 events.go:54] Warning Event: Count: 5, Reason: FailedAttachVolume, Message: AttachVolume.Attach failed for volume "pvc-4013dfe9-8b4a-4f8e-aa66-ba291eb67072" : failed to attach 66ee72ca-3aaf-4611-932a-d2838e7969df volume to 74fb3c39-ed15-4fd0-9fa7-21f965490fa1 compute: Bad request with: [POST https://rhos-d.infra.prod.upshift.rdu2.redhat.com:13774/v2.1/servers/74fb3c39-ed15-4fd0-9fa7-21f965490fa1/os-volume_attachments], error message: {"badRequest": {"code": 400, "message": "Invalid volume: volume 66ee72ca-3aaf-4611-932a-d2838e7969df already attached"}}
+[odo] I0112 18:34:36.497996   57367 events.go:54] Warning Event: Count: 6, Reason: FailedAttachVolume, Message: AttachVolume.Attach failed for volume "pvc-4013dfe9-8b4a-4f8e-aa66-ba291eb67072" : failed to attach 66ee72ca-3aaf-4611-932a-d2838e7969df volume to 74fb3c39-ed15-4fd0-9fa7-21f965490fa1 compute: Bad request with: [POST https://rhos-d.infra.prod.upshift.rdu2.redhat.com:13774/v2.1/servers/74fb3c39-ed15-4fd0-9fa7-21f965490fa1/os-volume_attachments], error message: {"badRequest": {"code": 400, "message": "Invalid volume: volume 66ee72ca-3aaf-4611-932a-d2838e7969df already attached"}}
+[odo] 
+
+I0112 18:35:17.815254   57367 events.go:54] Warning Event: Count: 7, Reason: FailedAttachVolume, Message: AttachVolume.Attach failed for volume "pvc-4013dfe9-8b4a-4f8e-aa66-ba291eb67072" : failed to attach 66ee72ca-3aaf-4611-932a-d2838e7969df volume to 74fb3c39-ed15-4fd0-9fa7-21f965490fa1 compute: Bad request with: [POST https://rhos-d.infra.prod.upshift.rdu2.redhat.com:13774/v2.1/servers/74fb3c39-ed15-4fd0-9fa7-21f965490fa1/os-volume_attachments], error message: {"badRequest": {"code": 400, "message": "Invalid volume: volume 66ee72ca-3aaf-4611-932a-d2838e7969df already attached"}}
+[odo] 
+I0112 18:36:32.187691   57367 events.go:54] Warning Event: Count: 8, Reason: FailedAttachVolume, Message: AttachVolume.Attach failed for volume "pvc-4013dfe9-8b4a-4f8e-aa66-ba291eb67072" : failed to attach 66ee72ca-3aaf-4611-932a-d2838e7969df volume to 74fb3c39-ed15-4fd0-9fa7-21f965490fa1 compute: Bad request with: [POST https://rhos-d.infra.prod.upshift.rdu2.redhat.com:13774/v2.1/servers/74fb3c39-ed15-4fd0-9fa7-21f965490fa1/os-volume_attachments], error message: {"badRequest": {"code": 400, "message": "Invalid volume: volume 66ee72ca-3aaf-4611-932a-d2838e7969df already attached"}}
+[odo]  âœ—  Waiting for component to start [5m] [WARNING x8: FailedAttachVolume]
+[odo]  âœ—  Failed to start component with name "myspringbootproject". Error: Failed to create the component: error while waiting for deployment rollout: timeout while waiting for myspringbootproject-app deployment roll out\nFor more information to help determine the cause of the error, re-run with '-v'.
+[odo] See below for a list of failed events that occured more than 5 times during deployment:
+[odo] 
+[odo]  NAME                                                       COUNT  REASON              MESSAGE                                                                                                                           
+[odo] 
+[odo]  myspringbootproject-app-7d46d84f49-vv9pm.16c9a9f201957ef0  8      FailedAttachVolume  AttachVolume.Attach failed for volume "pvc-4013dfe9-8b4a-4f8e-aa66-ba291eb67072" : failed to attach                               
+[odo]                                                                                        66ee72ca-3aaf-4611-932a-d2838e7969df volume to 74fb3c39-ed15-4fd0-9fa7-21f965490fa1 compute: Bad request with: [POST              
+[odo]                                                                                        https://rhos-d.infra.prod.upshift.rdu2.redhat.com:13774/v2.1/servers/74fb3c39-ed15-4fd0-9fa7-21f965490fa1/os-volume_attachments], 
+[odo]                                                                                        error message: {"badRequest": {"code": 400, "message": "Invalid volume: volume 66ee72ca-3aaf-4611-932a-d2838e7969df already       
+[odo]                                                                                        attached"}}                                                                                                                       
+[odo] 
+[odo] 
+Deleting project: cmd-devfile-list-test164mje
+Running odo with args [odo project delete cmd-devfile-list-test164mje -f]
+[odo] I0112 18:36:47.585812   60513 util.go:787] HTTPGetRequest: https://raw.githubusercontent.com/openshift/odo/master/build/VERSION
+[odo] I0112 18:36:47.586566   60513 util.go:808] Response will be cached in /tmp/odohttpcache for 1h0m0s
+[odo] I0112 18:36:47.648658   60513 version.go:120] Error checking if newer odo release is available: unable to get latest release tag: error getting latest release: fail to retrive https://raw.githubusercontent.com/openshift/odo/master/build/VERSION: Not Found
+[odo] I0112 18:36:47.752940   60513 kclient.go:231] Checking if "projects" resource is supported
+[odo] I0112 18:36:47.812725   60513 kclient.go:231] Checking if "projects" resource is supported
+[odo]  âš   Warning! Projects are asynchronously deleted from the cluster. odo does its best to delete the project. Due to multi-tenant clusters, the project may still exist on a different node.
+[odo] I0112 18:36:47.909641   60513 odo.go:75] Could not get the latest release information in time. Never mind, exiting gracefully :)
+[odo]  âœ“  Deleted project : cmd-devfile-list-test164mje
+Setting current dir to: /home/cloud-user/odo/tests/integration/devfile
+Deleting dir: /tmp/1110141202
+
+â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when a component is created with storage and url [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:31
+    when the component is pushed
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:93
+      should describe the component correctly
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:97
+
+      Plain Kubernetes scenario only, skipping
+
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:184.649 seconds]
+odo devfile storage command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_storage_test.go:14
+  When devfile storage list command is executed
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_storage_test.go:178
+    should list the storage with the proper states
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_storage_test.go:179
+------------------------------
+â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when a component is created with storage and url [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:31
+    should describe the component correctly
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:76
+
+    Plain Kubernetes scenario only, skipping
+
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when devfile has missing metadata [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:103
+    when projectType and language is missing
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:140
+      when the component is pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:148
+        should show 'Not available' for 'Type' in odo describe
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:152
+
+        Plain Kubernetes scenario only, skipping
+
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:153.233 seconds]
+odo devfile push command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:18
+  devfile is modified
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:835
+    odo push (without -f) is executed
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:925
+      when java-springboot application is created and pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:839
+        when Update the devfile.yaml, do odo push
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:852
+          when compare the local and remote files
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:868
+            localFiles and remoteFiles should match
+            /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:912
+------------------------------
+â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:156.425 seconds]
+odo devfile push command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:18
+  devfile is modified
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:835
+    odo push -f is executed
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:922
+      when java-springboot application is created and pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:839
+        when Update the devfile.yaml, do odo push
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:852
+          Ensure the build passes
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:864
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:181.399 seconds]
+odo devfile push command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:18
+  devfile is modified
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:835
+    odo push (without -f) is executed
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:925
+      when java-springboot application is created and pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:839
+        when Update the devfile.yaml, do odo push
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:852
+          Ensure the build passes
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:864
+------------------------------
+â€¢
+------------------------------
+â€¢ [SLOW TEST:202.019 seconds]
+odo devfile push command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:18
+  devfile is modified
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:835
+    odo push -f is executed
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:922
+      when java-springboot application is created and pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:839
+        when Update the devfile.yaml, do odo push
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:852
+          when compare the local and remote files
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:868
+            localFiles and remoteFiles should match
+            /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:912
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when devfile has missing metadata [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:103
+    when projectType and language is missing
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:140
+      should show 'Not available' for 'Type' in odo describe
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:145
+
+      Plain Kubernetes scenario only, skipping
+
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [1.075 seconds]
+odo devfile url command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:16
+  Testing URLs for Kubernetes specific scenarios
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:467
+    when creating a nodejs component [BeforeEach]
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:475
+      when creating url
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:481
+        when creating a second url
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:488
+          should use an existing URL when there are URLs with no host defined in the env file with same port
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:494
+
+          This is a Kubernetes specific scenario, skipping
+
+          /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:471
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when devfile has missing metadata [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:103
+    when projectType is missing
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:121
+      when the component is pushed
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:130
+        should show the language for 'Type' in odo describe
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:134
+
+        Plain Kubernetes scenario only, skipping
+
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+Pod hlddvx-app-6d789f869d-d8xj4 did not satisfy condition: Skipping old pod
+Pod hlddvx-app-6d789f869d-ngwgh did not satisfy condition: Phase is not running
+
+â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [0.001 seconds]
+odo devfile describe command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:15
+  when a component is created with storage and url [BeforeEach]
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:31
+    should describe the component correctly from a disconnected cluster
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:80
+
+    Plain Kubernetes scenario only, skipping
+
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_describe_test.go:21
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [2.055 seconds]
+odo devfile url command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:16
+  Testing URLs for Kubernetes specific scenarios
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:467
+    when creating a nodejs component [BeforeEach]
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:475
+      when creating url
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:481
+        should verify
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:502
+
+        This is a Kubernetes specific scenario, skipping
+
+        /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_url_test.go:471
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+S [SKIPPING] in Spec Setup (BeforeEach) [1.705 seconds]
+odo devfile push command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:18
+  using Kubernetes cluster
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:978
+    when project with with 'default' name is used [BeforeEach]
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:984
+      should push successfully
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:986
+
+      This is a Kubernetes specific scenario, skipping
+
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_push_test.go:981
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:491.219 seconds]
+odo devfile storage command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_storage_test.go:14
+  When devfile storage create command is executed
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_storage_test.go:29
+    should create storage and attach to specified container successfully and list it correctly
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_storage_test.go:71
+------------------------------
+â€¢ [SLOW TEST:133.777 seconds]
+odo devfile app command tests
+/home/cloud-user/odo/tests/integration/devfile/cmd_devfile_app_test.go:13
+  when the user creates and pushes two new devfile components in different apps
+  /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_app_test.go:58
+    when the user creates and pushes a third devfile component
+    /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_app_test.go:90
+      should list, describe and delete the app properly with json output
+      /home/cloud-user/odo/tests/integration/devfile/cmd_devfile_app_test.go:123
+------------------------------
+â€¢
+
+Summarizing 1 Failure:
+
+[Fail] odo list with devfile devfile has missing metadata when projectType and language is missing when the component is pushed [BeforeEach] should show 'Not available' for 'Type' in odo list 
+/home/cloud-user/odo/tests/helper/helper_cmd_wrapper.go:100
+
+Ran 224 of 235 Specs in 1633.490 seconds
+FAIL! -- 223 Passed | 1 Failed | 1 Pending | 10 Skipped
+
+
+Ginkgo ran 1 suite in 27m25.005202387s
+Test Suite Failed
+GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo  -randomizeAllSpecs -slowSpecThreshold=120 -timeout 14400s -nodes=1 -focus="odo login and logout command tests" tests/integration/loginlogout/
+Running Suite: Login Logout Suite
+=================================
+Random Seed: 1642031906 - Will randomize all specs
+Will run 3 of 3 specs
+
+â€¢â€¢â€¢
+Ran 3 of 3 Specs in 2.596 seconds
+SUCCESS! -- 3 Passed | 0 Failed | 0 Pending | 0 Skipped
+PASS
+
+Ginkgo ran 1 suite in 6.089391573s
+Test Suite Passed
+GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo  -randomizeAllSpecs -slowSpecThreshold=120 -timeout 14400s -nodes=4 -focus="odo project command tests" tests/integration/project/
+Running Suite: Project Suite
+============================
+Random Seed: 1642031914 - Will randomize all specs
+Will run 11 specs
+
+Running in parallel across 4 nodes
+
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+Ran 11 of 11 Specs in 8.614 seconds
+SUCCESS! -- 11 Passed | 0 Failed | 0 Pending | 0 Skipped
+
+
+Ginkgo ran 1 suite in 12.024625181s
+Test Suite Passed
+GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo  -randomizeAllSpecs -slowSpecThreshold=120 -timeout 14400s -nodes=4 tests/integration/operatorhub/
+Running Suite: Operatorhub Suite
+================================
+Random Seed: 1642031928 - Will randomize all specs
+Will run 80 specs
+
+Running in parallel across 4 nodes
+
+â€¢
+------------------------------
+S [SKIPPING] [35.992 seconds]
+odo link command tests for OperatorHub
+/home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:16
+  when one component is deployed
+  /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:297
+    when another component is deployed
+    /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:328
+      should link the two components successfully without service binding operator [It]
+      /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:371
+
+      This is a Kubernetes specific scenario, skipping
+
+      /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:375
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+P [PENDING]
+odo link command tests for OperatorHub
+/home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:16
+  when one component is deployed
+  /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:297
+    when another component is deployed
+    /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:328
+      should link the two components successfully with service binding operator
+      /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:349
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+P [PENDING]
+odo link command tests for OperatorHub
+/home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:16
+  Operators are installed in the cluster
+  /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:28
+    when getting sources, a devfile defining a component, a service and a link, and executing odo push
+    /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:258
+      should find owner references on link and service
+      /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:280
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:227.588 seconds]
+odo link command tests for OperatorHub
+/home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:16
+  Operators are installed in the cluster
+  /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:28
+    when a component and a service are deployed
+    /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:49
+      when a storage is added and deployed
+      /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:73
+        when a link between the component and the service is created
+        /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:79
+          should run odo push successfully
+          /home/cloud-user/odo/tests/integration/operatorhub/cmd_link_test.go:85
+------------------------------
+â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢
+Ran 77 of 80 Specs in 623.590 seconds
+SUCCESS! -- 77 Passed | 0 Failed | 2 Pending | 1 Skipped
+
+
+Ginkgo ran 1 suite in 10m27.500422912s
+Test Suite Passed
+GOFLAGS='-mod=vendor' go run -mod=vendor github.com/onsi/ginkgo/ginkgo  -randomizeAllSpecs -slowSpecThreshold=120 -timeout 14400s -nodes=4 tests/e2escenarios/
+Running Suite: odo e2e scenarios
+================================
+Random Seed: 1642032558 - Will randomize all specs
+Will run 4 specs
+
+Running in parallel across 4 nodes
+
+â€¢â€¢
+------------------------------
+â€¢ [SLOW TEST:122.156 seconds]
+odo devfile supported tests
+/home/cloud-user/odo/tests/e2escenarios/e2e_devfile_test.go:23
+  odo debug support for devfile components
+  /home/cloud-user/odo/tests/e2escenarios/e2e_devfile_test.go:65
+    Verify output debug information for java-springboot works
+    /home/cloud-user/odo/tests/e2escenarios/e2e_devfile_test.go:69
+------------------------------
+â€¢ [SLOW TEST:134.499 seconds]
+odo devfile supported tests
+/home/cloud-user/odo/tests/e2escenarios/e2e_devfile_test.go:23
+  odo debug support for devfile components
+  /home/cloud-user/odo/tests/e2escenarios/e2e_devfile_test.go:65
+    Verify output debug information for java-quarkus debug works
+    /home/cloud-user/odo/tests/e2escenarios/e2e_devfile_test.go:72
+------------------------------
+
+Ran 4 of 4 Specs in 134.522 seconds
+SUCCESS! -- 4 Passed | 0 Failed | 0 Pending | 0 Skipped
+
+
+Ginkgo ran 1 suite in 2m18.386790957s
+Test Suite Passed
