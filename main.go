@@ -14,14 +14,15 @@ import (
 
 const (
 	timeout = 30 * time.Second
+	FIX_DSR = "\x1b[1;"
 )
 
 var (
-	userRE    = regexp.MustCompile("[0-9a-zA-Z]Select language:[0-9a-zA-Z]")
-	passRE    = regexp.MustCompile("[0-9a-zA-Z]")
-	projectRE = regexp.MustCompile("[0-9a-zA-Z]Select project type:[0-9a-zA-Z]")
-	starterRE = regexp.MustCompile("[0-9a-zA-Z]Which starter project do you want to use[0-9a-zA-Z]")
-	endRE     = regexp.MustCompile("[0-9a-zA-Z]directly[0-9a-zA-Z]")
+	userRE    = regexp.MustCompile("Select language:")
+	projectRE = regexp.MustCompile("Select project type:")
+	starterRE = regexp.MustCompile("Which starter project do you want to use")
+	nameRE    = regexp.MustCompile("Enter component name")
+	endRE     = regexp.MustCompile("directly")
 )
 
 func helper() string {
@@ -38,7 +39,7 @@ func main() {
 	dir := helper()
 	defer os.RemoveAll(dir)
 
-	e, _, err := expect.Spawn(fmt.Sprintf("odo init"), -1)
+	e, _, err := expect.Spawn("odo init", -1)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -46,10 +47,6 @@ func main() {
 	st, _, _ := e.Expect(userRE, timeout)
 	fmt.Println(st, err)
 	e.Send("go\n")
-
-	st, _, _ = e.Expect(passRE, timeout)
-	fmt.Println(st, err)
-	e.Send("\n")
 
 	st, _, _ = e.Expect(projectRE, timeout)
 	fmt.Println(st, err)
@@ -59,12 +56,12 @@ func main() {
 	fmt.Println(st, err)
 	e.Send("\n")
 
-	// st, _, _ = e.Expect(passRE, timeout)
-	// // fmt.Println(st)
-	// e.Send("mygoapp\n")
+	st, _, _ = e.Expect(nameRE, timeout)
+	fmt.Println(st)
+	e.Send(FIX_DSR + "mygoapp\n")
 
 	st, _, _ = e.Expect(endRE, timeout)
-	// fmt.Println(st, match)
+	fmt.Println(st)
 
 	files, _ := ioutil.ReadDir(dir)
 	for _, file := range files {
