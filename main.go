@@ -1,75 +1,76 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
-	"os/exec"
+	"regexp"
 	"time"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
-	goexpect "github.com/Netflix/go-expect"
-	"github.com/hinshun/vt10x"
+	expect "github.com/google/goexpect"
 )
 
-func init() {
-	// disable color output for all prompts to simplify testing
-	core.DisableColor = true
+const (
+	timeout = 30 * time.Second
+)
+
+var (
+	userRE    = regexp.MustCompile("[0-9a-zA-Z]Select language:[0-9a-zA-Z]")
+	passRE    = regexp.MustCompile("[0-9a-zA-Z]")
+	projectRE = regexp.MustCompile("[0-9a-zA-Z]Select project type:[0-9a-zA-Z]")
+	starterRE = regexp.MustCompile("[0-9a-zA-Z]Which starter project do you want to use[0-9a-zA-Z]")
+	endRE     = regexp.MustCompile("[0-9a-zA-Z]directly[0-9a-zA-Z]")
+)
+
+func helper() string {
+	directory, err := ioutil.TempDir("", "")
+	if err != nil {
+		log.Fatal(err)
+	}
+	os.Chdir(directory)
+	return directory
 }
 
 func main() {
-	// buf := new(bytes.Buffer)
-	//c, _, err := vt10x.NewVT10XConsole(goexpect.WithStdout(buf))
+	flag.Parse()
+	dir := helper()
+	defer os.RemoveAll(dir)
 
-	c, _, err := vt10x.NewVT10XConsole(goexpect.WithStdout(os.Stdout))
-	// c, err := expect.NewConsole(expect.WithStdout(os.Stdout))
+	e, _, err := expect.Spawn(fmt.Sprintf("odo init"), -1)
 	if err != nil {
 		log.Fatal(err)
 	}
-	defer c.Close()
-	tmpdir, _ := ioutil.TempDir("", "")
-	os.Chdir(tmpdir)
-	fmt.Println(tmpdir)
-	cmd := exec.Command("main", "init")
+	defer e.Close()
+	st, _, _ := e.Expect(userRE, timeout)
+	fmt.Println(st, err)
+	e.Send("go\n")
 
-	cmd.Stdin = c.Tty()
-	cmd.Stdout = c.Tty()
-	cmd.Stderr = c.Tty()
+	st, _, _ = e.Expect(passRE, timeout)
+	fmt.Println(st, err)
+	e.Send("\n")
 
-	go func() {
-		c.ExpectEOF()
-	}()
+	st, _, _ = e.Expect(projectRE, timeout)
+	fmt.Println(st, err)
+	e.Send("\n")
 
-	err = cmd.Start()
-	if err != nil {
-		log.Fatal(err)
+	st, _, err = e.Expect(starterRE, timeout*3)
+	fmt.Println(st, err)
+	e.Send("\n")
+
+	// st, _, _ = e.Expect(passRE, timeout)
+	// // fmt.Println(st)
+	// e.Send("mygoapp\n")
+
+	st, _, _ = e.Expect(endRE, timeout)
+	// fmt.Println(st, match)
+
+	files, _ := ioutil.ReadDir(dir)
+	for _, file := range files {
+		{
+			fmt.Println(file)
+		}
 	}
-	time.Sleep(time.Second * 2)
-	time.Sleep(time.Second * 2)
-
-	//lang := regexp.MustCompile("[0-9a-zA-Z]Select language:[0-9a-zA-Z]")
-
-	// c.Expect(goexpect.RegexpPattern("Select", "language:"))
-	_, err = c.Expect(goexpect.String("Select language:"))
-	fmt.Print(err)
-	c.Send(string("go"))
-	time.Sleep(time.Second * 2)
-	c.Send(string(terminal.KeyEnter))
-	time.Sleep(time.Second * 3)
-	c.Send(string(terminal.KeyEnter))
-	time.Sleep(time.Second * 3)
-	c.Send(string(terminal.KeyEnter))
-	time.Sleep(time.Second * 3)
-	c.SendLine("mygolang" + string(terminal.KeyEnter))
-	err = cmd.Wait()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	_ = c.Tty().Close()
-
-	//fmt.Pri4t(buf.String())
-	os.RemoveAll(tmpdir)
+	//
 }
