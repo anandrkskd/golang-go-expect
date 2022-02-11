@@ -8,7 +8,9 @@ import (
 	"os"
 	"os/exec"
 
+	"github.com/Netflix/go-expect"
 	"github.com/hinshun/vt10x"
+	"github.com/kr/pty"
 )
 
 func main() {
@@ -18,10 +20,18 @@ func main() {
 	fmt.Println(tmpdir)
 	defer os.RemoveAll(tmpdir)
 
-	c, _, err := vt10x.NewVT10XConsole()
+	ptm, pts, err := pty.Open()
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	term := vt10x.New(vt10x.WithWriter(pts))
+
+	c, err := expect.NewConsole(expect.WithStdin(ptm), expect.WithStdout(term), expect.WithCloser(pts, ptm))
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	defer c.Close()
 
 	cmd := exec.Command("odo", "init")

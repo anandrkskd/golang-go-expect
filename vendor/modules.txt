@@ -3,7 +3,7 @@
 github.com/Netflix/go-expect
 # github.com/creack/pty v1.1.17
 github.com/creack/pty
-# github.com/hinshun/vt10x v0.0.0-20180616224451-1954e6464174
+# github.com/hinshun/vt10x v0.0.0-20220127042424-3ca73d0126d7
 ## explicit
 github.com/hinshun/vt10x
 # github.com/kr/pty v1.1.8
