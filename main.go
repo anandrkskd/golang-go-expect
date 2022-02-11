@@ -1,75 +1,72 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
 	"os/exec"
-	"time"
 
-	"github.com/AlecAivazis/survey/v2/core"
-	"github.com/AlecAivazis/survey/v2/terminal"
-	goexpect "github.com/Netflix/go-expect"
+	"github.com/Netflix/go-expect"
 	"github.com/hinshun/vt10x"
+	"github.com/kr/pty"
 )
 
-func init() {
-	// disable color output for all prompts to simplify testing
-	core.DisableColor = true
-}
-
 func main() {
-	// buf := new(bytes.Buffer)
-	//c, _, err := vt10x.NewVT10XConsole(goexpect.WithStdout(buf))
 
-	c, _, err := vt10x.NewVT10XConsole(goexpect.WithStdout(os.Stdout))
-	// c, err := expect.NewConsole(expect.WithStdout(os.Stdout))
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer c.Close()
 	tmpdir, _ := ioutil.TempDir("", "")
 	os.Chdir(tmpdir)
 	fmt.Println(tmpdir)
-	cmd := exec.Command("main", "init")
+	defer os.RemoveAll(tmpdir)
 
+	ptm, pts, err := pty.Open()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	term := vt10x.New(vt10x.WithWriter(pts))
+
+	c, err := expect.NewConsole(expect.WithStdin(ptm), expect.WithStdout(term), expect.WithCloser(pts, ptm))
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	defer c.Close()
+
+	cmd := exec.Command("odo", "init")
 	cmd.Stdin = c.Tty()
 	cmd.Stdout = c.Tty()
 	cmd.Stderr = c.Tty()
-
-	go func() {
-		c.ExpectEOF()
-	}()
-
 	err = cmd.Start()
 	if err != nil {
 		log.Fatal(err)
 	}
-	time.Sleep(time.Second * 2)
-	time.Sleep(time.Second * 2)
 
-	//lang := regexp.MustCompile("[0-9a-zA-Z]Select language:[0-9a-zA-Z]")
+	buf := new(bytes.Buffer)
 
-	// c.Expect(goexpect.RegexpPattern("Select", "language:"))
-	_, err = c.Expect(goexpect.String("Select language:"))
-	fmt.Print(err)
-	c.Send(string("go"))
-	time.Sleep(time.Second * 2)
-	c.Send(string(terminal.KeyEnter))
-	time.Sleep(time.Second * 3)
-	c.Send(string(terminal.KeyEnter))
-	time.Sleep(time.Second * 3)
-	c.Send(string(terminal.KeyEnter))
-	time.Sleep(time.Second * 3)
-	c.SendLine("mygolang" + string(terminal.KeyEnter))
+	res, err := c.ExpectString("Select language")
+	fmt.Fprintln(buf, res)
+	c.SendLine("go")
+	res, err = c.ExpectString("Select project type")
+	fmt.Fprintln(buf, res)
+	c.SendLine("Go Runtime")
+	res, err = c.ExpectString("Which starter project do you want to use")
+	fmt.Fprintln(buf, res)
+	c.SendLine("go-starter")
+	res, err = c.ExpectString("Enter component name")
+	fmt.Fprintln(buf, res)
+	c.SendLine("mytestapp")
+	res, err = c.ExpectString("Your new component \"mytestapp\" is ready in the current directory.")
+	fmt.Fprintln(buf, res)
+
 	err = cmd.Wait()
 	if err != nil {
 		log.Fatal(err)
 	}
+	// Close the slave end of the pty, and read the remaining bytes from the master end.
+	c.Tty().Close()
 
-	_ = c.Tty().Close()
+	fmt.Println(buf)
 
-	//fmt.Pri4t(buf.String())
-	os.RemoveAll(tmpdir)
 }
